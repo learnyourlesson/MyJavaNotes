@@ -1,4 +1,4 @@
-[toc]
+[TOC]
 
 
 
@@ -12,12 +12,12 @@
 位(bit)
 字节(Byte)这是数据存储的最小单位
 
-	1Byte=8bit
-	1KB=1024Byte
-	1Mb= 1024  KB
-	1GB=  1024 MB
-	1TB=   1024  GB
-	1PB=    1024 TB
+	1Byte= 8  bit
+	1KB= 1024 Bte
+	1Mb= 1024 KB
+	1GB= 1024 MB
+	1TB= 1024 GB
+	1PB= 1024 TB
 
 #### windows 控制台指令
 
@@ -213,7 +213,7 @@ public class Demo3{
 例如:
 
 	long nu1 = 100;//int ->long int类型的范围比long类型小,所以是从小到大会进行自动类转换
-
+	
 	double num2 = 2.5F;//float ->double  float类型的范围比double类型的范围小,所以是从小到大会进行自动类型转换
 
 #### 强制类型转换
@@ -544,10 +544,10 @@ for(int i : arr){
 		②堆
 			new出来的东西都在堆中
 			堆中的东西都有默认初始化值
-
+	
 	数组的实体保存在堆中
 	数组名实际保存的是数组实体的地址值
-
+	
 	局部变量:定义在方法中的变量
 
 ### 面向对象
@@ -710,14 +710,14 @@ String的特点:String是不可变的
 String是不可变的
 
 2. 一些常用方法
-contains	判断一个字符串(比如"sjasd")中是否包含某个字符串(比如"ja")
-charat	获得某个字符串指定索引位置的字符
-public String substring​(int beginIndex)	把某个字符串从index索引开始截取到最后
-public String substring​(int beginIndex,int endIndex)	把某个字符串索引start到索引end截取出来
-public char[] toCharArray​()	把字符串转化成字符数组
-public byte[] getBytes​()	把字符串转化成字节数组
-public int length​()	获得字符串的长度
-public int indexOf​(int ch)	获取某个字符在字符串中第一次出现的索引
+	contains	判断一个字符串(比如"sjasd")中是否包含某个字符串(比如"ja")
+	charat	获得某个字符串指定索引位置的字符
+	public String substring​(int beginIndex)	把某个字符串从index索引开始截取到最后
+	public String substring​(int beginIndex,int endIndex)	把某个字符串索引start到索引end截取出来
+	public char[] toCharArray​()	把字符串转化成字符数组
+	public byte[] getBytes​()	把字符串转化成字节数组
+	public int length​()	获得字符串的长度
+	public int indexOf​(int ch)	获取某个字符在字符串中第一次出现的索引
 
 #### StringBuilder是一个可变的字符序列
 
@@ -1128,9 +1128,9 @@ public interface InterfaceA {
 	例如:
 		Outer out=new Outer();
 		Outer.Inner obj = out.new Inner();
-
+	
 		那么obj这个内部类对象中的Outer.this就是表示out这个对象.
-
+	
 	外部类和内部类成员重名问题:
 		用this.成员变量名 表示内部类的成员变量
 		用外部类名.this.成员变量表示外部类的成员变量
@@ -1320,7 +1320,7 @@ System.out.println(list);
 	2.Date d = new Date();//就是把当前时间封装成一个Date对象
 	3.Date d = new Date(毫秒值);//就是从时间原点开始过了多少毫秒的那个时间点
 					//把这个时间点封装成Date对象。
-
+	
 	时间原点：计算机 1970年1月1日 0:0:0
 		因为我天朝大国是在东八区，简单理解就是有时差。时差8小时
 		1970年1月1日 8:0:0
@@ -1359,7 +1359,7 @@ public abstract void add(int field, int amount)：根据日历的规则，为给
 	2、set方法其实有很多重载的方法
 		不仅仅是可以设置年月日
 		还可以设置单独的字段值
-
+	
 	set的时间一定会有，如果自己set的时间实际不存在，日历类会自动的调整。set时天是0时就是上个月的最后一天，-1就是上个月的倒数第二天，13月就是明年的下个月
 
 ```java
@@ -1434,7 +1434,7 @@ Date/SimpleDateFormat/Calendar使用时机
 		}catch(异常类名 变量名){
 			如果出现了这样的异常，我该怎么处理。
 		}
-
+	
 	2. throws---抛出异常
 		抛给了调用者。如果调用者没有处理怎么办？继续抛给他的调用者。
 		最终还是抛给了JVM虚拟机处理。
@@ -1774,7 +1774,7 @@ System.out.println(list);
 
 		**去重的原理：	
 			hashCode + equals
-
+		
 		空参构造
 		public LinkedHashSet() {
 		super(16, .75f, true);
@@ -1806,6 +1806,7 @@ System.out.println(list);
 * int size(); -- 获取集合的长度
 * V get(Object key); -- 通过键获取值
 	
+
 遍历方式：
 	Map<String,String> map = new HashMap<>();
 	
@@ -1824,20 +1825,20 @@ System.out.println(list);
 		entry.getKey();
 		entry.getValue();
 	}
-		
+
 常用子类：
 
 ##### HashMap：键不允许重复，存取无序（最常用）
 	底层数据结构:哈希表（数组+单向链表/数组+红黑树）
 	键去重的原理：
 		hashCode+equals
-		
+
 * LinkedHashMap:键不允许重复，存取有序
 	底层数据结构:哈希表（数组+单向链表/数组+红黑树） + 双向链表（存储了两份数据）
 	LinkedHashMap有序，可分为插入顺序和访问顺序两种。如果是访问顺序，那put和get操作已存在的Entry时，都会把Entry移动到双向链表的表尾(其实是先删除再插入)。
 	键去重的原理：
 		hashCode+equals
-		
+	
 * TreeMap:键不允许重复，基于键的内容实现排序
 	底层数据结构：红黑树
 	键去重的原理：
@@ -1851,7 +1852,7 @@ System.out.println(list);
 
 	找规律
 	找出口
-	
+
 ```java
 案例：遍历一个目录下的所有文件（包括子目录）
 	public void bl(File dir){
@@ -1903,7 +1904,7 @@ java内存和磁盘文件进行数据交互的通道
 			while((len = fis.read(bytes)) != -1){
 				
 			}
-		
+
 ###### 字节输出流（OutputStream）  -- 写
 
 	常用方法：
@@ -1922,7 +1923,7 @@ java内存和磁盘文件进行数据交互的通道
 			
 			FileOutputStream fos = new FileOutputStream(String fileName,true); -- 追加写
 			FileOutputStream fos = new FileOutputStream(File file,true); -- 追加写
-	
+
 
 	常用子类：
 		FileOutputStream
@@ -1950,7 +1951,7 @@ java内存和磁盘文件进行数据交互的通道
 	**注意：不同的码表对中文的支持不同
 		GBK:一个中文占2个字节
 		UTF-8：一个中文占3个字节
-	
+
 ###### 字符输入流（Reader） -- read
 
 	通用方法:
@@ -1968,8 +1969,9 @@ java内存和磁盘文件进行数据交互的通道
 			
 		BufferedReader:只起缓冲的功能,有一个特殊api，readLine，一次读取一行数据
 			BufferedReader br = new BufferedReader(FileReader);
-			
-	
+
+
+​	
 ###### 字符输出流（Writer） -- write
 
 	通用方法：
@@ -1984,13 +1986,13 @@ java内存和磁盘文件进行数据交互的通道
 		OutputStreamWriter：内存（字符）--》磁盘（字节） -- 字符流到字节流的桥梁
 			OutputStreamWriter osw = new OutputStreamWriter(FileOutputStream);
 			OutputStreamWriter osw = new OutputStreamWriter(FileOutputStream,"GBK/UTF-8");
-
+	
 		FileWriter
 			FileWriter fw = new FileWriter("");  === new OutputStreamWriter(FileOutputStream)
 			
 		BufferedWriter:只起缓冲的功能，有一个特殊api，newLine，可以写一个换行，而且会根据不同的操作系统，写不同的换行符
 			BufferedWriter bw = new BufferedWriter(FileWriter);
-			
+
 **注意：字符缓冲流使用前提,需求是一次读写一个字符,需要使用特殊api时（比如需求就是一次读一行）**
 			
 #### IO流总结：
@@ -2012,7 +2014,7 @@ java内存和磁盘文件进行数据交互的通道
 	两个转换流
 		InputStreamReader
 		OutputStreamWriter
-		
+
 ##### 如何选择流对象完成功能：
 
 	① 如果是复制，选择字节流
@@ -2222,13 +2224,13 @@ fr.close();
 
 	进程：
 		是正在运行的程序，是系统进行资源分配和调用的独立单位。每一个进程都有它自己的内存空间和系统资源
-
+	
 	线程：是进程中的单个顺序控制流，是一条执行路径
 	单线程：一个进程如果只有一条执行路径，则称为单线程程序
 	多线程：一个进程如果有多条执行路径，则称为多线程程序
-
+	
 	一个程序至少有一个进程，一个进程里至少有一个线程。
-
+	
 	单线程：安全性高，但是效率低
 	多线程：安全性低，效率高
 
@@ -2328,7 +2330,7 @@ void setDaemon(boolean on)
 
 	synchronized:同步（锁），修饰代码块和方法，被修饰的代码块和方法一旦被
 	某个线程访问，则直接锁住，其它的线程将无法访问
-
+	
 	注意：锁对象需要被所有的线程所共享
 	同步：意味着安全性高，效率低
 	非同步：安全性低，效率高
@@ -2369,7 +2371,7 @@ void setDaemon(boolean on)
 	Hashtable
 		该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键或者值
 		从Java 2平台v1.2开始，该类进行了改进，实现了Map接口，使其成为Java Collections Framework的成员。 与新的集合实现不同， Hashtable被同步。 如果不需要线程安全的实现，建议使用HashMap代替Hashtable
-
+	
 	当我们需要保证线程安全的情况下可以选择使用StringBuffer，但是在使用List和map集合的时候一般也不用Vector，Hashtable。可以用 Collections.synchronizedList()
 	Collections.synchronizedMap()
 	这两个方法来把一个线程不安全的集合变成线程安全的。
@@ -2418,14 +2420,14 @@ private synchronized  void print() throws Exception {
 #### InetAddress类
 
 	此类表示互联网协议 (IP) 地址。 
-
+	
 	如果创建InetAddress对象：
 		①static InetAddress getByName(String host)   //可以传入Ip地址，也可以传入主机名来获得InetAddress对象（注意：它是静态方法。因为IP地址是唯一的，所以传入IP地址肯定能获取到这个IP地址所对应的InetAddress对象。但是主机名有可能重复，所以得到的可能并不是我们想要的InetAddress对象。）
 		②static InteAddress getLocalHost();//获取本机的InteAddress对象。
-
+	
 	获取IP地址：
 		getHostAddress方法
-
+	
 	获取主机名：
 		getHostName方法
 
@@ -2442,9 +2444,9 @@ private synchronized  void print() throws Exception {
 			DatagramSocket:此类表示用来发送和接收数据,基于UDP协议的
 				
 		2.创建数据并打包
-
+	
 		3.发送数据
-
+	
 		4.释放资源
 
 ```java
@@ -2477,7 +2479,7 @@ ds.close();
 
 	步骤：
 	1.创建Socket对象 （DatagramSocket）注意要指定端口号
-
+	
 	2.接收数据
 	receive（）
 
@@ -2627,13 +2629,13 @@ public class World {
 #### 1.函数式编程
 
 	在数学中，函数就是有输入量、输出量的一套计算方案，也就是“拿什么东西做什么事情”。相对而言，面向对象过分强调“必须通过对象的形式来做事情”，而函数式思想则尽量忽略面向对象的复杂语法——强调做什么，而不是谁去做。
-
+	
 	面向对象的思想:
-
+	
 	做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情.
-
+	
 	函数式编程思想:
-
+	
 	只要能获取到结果,谁去做的,怎么做的都不重要,重视的是结果,不重视过程
 
 #### 2.Lambda表达式（其实就是一个接口的实现类只是更简洁）
@@ -2649,15 +2651,15 @@ public class World {
 			():接口中抽象方法的参数列表,没有参数,就空着;有参数就写出参数,多个参数使用逗号分隔
 			->:传递的意思,把参数传递给方法体{}
 			{}:重写接口的抽象方法的方法体
-
+	
 	Lambda的语法非常简洁，完全没有面向对象复杂的束缚。但是使用时有几个问题需要特别注意：
-
+	
 	1. 使用Lambda必须具有接口，且要求接口中有且仅有一个抽象方法。
-
+	
 	无论是JDK内置的Runnable、Comparator接口还是自定义的接口，只有当接口中的抽象方法存在且唯一时，才可以使用Lambda。
-
+	
 	2. 使用Lambda必须具有上下文推断。
-
+	
 	也就是方法的参数或局部变量类型必须为Lambda对应的接口类型，才能使用Lambda作为该接口的实例。
 
 **有且仅有一个抽象方法的接口，称为“函数式接口”。**
@@ -2673,11 +2675,11 @@ public class World {
 	所需类型不同
 	匿名内部类：可以是接口，也可以是抽象类，还可以是具体类
 	Lambda表达式：只能是函数式接口
-
+	
 	使用限制不同
 	如果接口中有且仅有一个抽象方法，可以使用Lambda表达式，也可以使用匿名内部类
 	如果接口中多于一个抽象方法，只能使用匿名内部类，而不能使用Lambda表达式。
-
+	
 	实现原理不同：
 	匿名内部类：编译之后，产生一个单独的.class字节码文件
 	Lambda表达式不会产生单独的Class字节码文件
@@ -2700,14 +2702,14 @@ public class World {
 	1.9
 		私有方法
 				应用场景：当接口中的方法有重复代码的时候，我们可以把重复的代码封装成一个私有方法，从而提高代码的复用性。
-
+	
 	示例代码:
 	public interface InterfaceA {
 		//常量
 		public static final int NUM =10;
 		//抽象方法
 		public abstract void methodAbstract();
-
+	
 		//默认方法  用于解决接口升级的问题
 		public default void methodDefault(){
 			System.out.println("methodDefault");
@@ -2720,11 +2722,11 @@ public class World {
 
 		//非静态私有方法  解决的是默认方法中代码重复的问题
 		private void m(){
-
+	
 		}
 		//静态私有方法    解决的是静态方法中代码重复的问题
 		private static void m2(){
-
+	
 		}
 	}
 
@@ -2732,13 +2734,13 @@ public class World {
 
 	我们在使用Lambda表达式做为方法参数的时候，其实就相当于传入一个方法的方法体(可以理解为某件事情的具体解决方案)。但是如果已经有某个方法的方法体和我们想传入的方法体相同的话，就没有必要再写一次，可以直接去引用这个已经存在的方法体传入。
 	这就是方法引用。
-
+	
 	引用构造器，其实就是引用构造方法
 	格式：类名::new
 	例子：Student:new
-
+	
 		理解：如果我们在使用匿名内部类的时候代码如下： 如果我们在重写方法的时候，方法体中只有一行代码，并且这行代码是调用了某个类的构造方法，并且我们把要重写的抽象方法中的所有的参数都按照顺序传入了这个构造方法中，这个时候我们就可以引用构造器。
-
+	
 		useStudentBuilder(new StudentBuilder() {
 			@Override
 			public Student build(String name, int age) {
@@ -2746,7 +2748,7 @@ public class World {
 			}
 		});
 		省略后：useStudentBuilder(Student::new);
-		
+
 |类型|示例|
 |---|---|
 |引用静态方法|ContainingClass::staticMethodName|
@@ -2770,7 +2772,7 @@ public class World {
 
 	Supplier<T>接口也被称为生产型接口
 		如果我们指定了接口的泛型是什么类型，那么接口中的get方法就会生产什么类型的数据供我们使用
-
+	
 	Supplier<T>：包含一个无参的方法
 		T get​()：获得结果 
 		该方法不需要参数，它会按照某种实现逻辑(由Lambda表达式实现)返回一个数据
@@ -2778,7 +2780,7 @@ public class World {
 ##### Consumer<T>接口
 
 	Consumer<T>接口也被称为消费型接口，它消费的数据的数据类型由泛型指定
-
+	
 	Consumer<T>：包含两个方法
 		void accept​(T t)：对给定的参数执行此操作
 		default Consumer<T> andThen​(Consumer after)：返回一个组合的 Consumer，依次执行此操作，然后执行 after操作（先执调用对象的accpt函数，然后用执行后的结果接着执行after）
@@ -2800,7 +2802,7 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 ##### Predicate<T>接口
 
 	Predicate<T>接口通常用于判断参数是否满足指定的条件(过滤接口)
-
+	
 	方法介绍
 		boolean test​(T t)：对给定的参数进行判断(判断逻辑由Lambda表达式实现)，返回一个布尔值 
 		default Predicate<T> negate​()：返回一个逻辑的否定，对应逻辑非
@@ -2818,16 +2820,16 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 
 #### Stream流
 
-##### 1.生成方式
+##### 1. 生成方式
 
 	Collection体系的集合可以使用默认方法stream​()生成流
 		default Stream<E> stream​()
-
+	
 	Map体系的集合间接的生成流（键流或值流）
-
+	
 	数组可以通过Stream接口的静态方法of​(T... values)生成流
 
-##### 2.中间操作
+##### 2. 中间操作
 
 ###### 过滤
 
@@ -2846,33 +2848,37 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 
 ###### 排序
 
-	Stream<T> sorted​()：返回由此流的元素组成的流，根据自然顺序排序
-	Stream<T> sorted​(Comparator comparator)：返回由该流的元素组成的流，根据提供的Comparator进行排序
-		Comparator接口中的方法	
-			int compare​(T o1, T o2)
+```java
+Stream<T> sorted ()：返回由此流的元素组成的流，根据自然顺序排序
+Stream<T> sorted (Comparator comparator)：返回由该流的元素组成的流，根据提供的Comparator进行排序
+	Comparator接口中的方法	
+		int compare (T o1, T o2)
+```
 
 ###### 转变
 
-	<R> Stream<R> map​(Function mapper)：返回由给定函数应用于此流的元素的结果组成的流
-		Function接口中的方法		R apply​(T t)
-	IntStream mapToInt​(ToIntFunction mapper)：返回一个IntStream其中包含将给定函数应用于此流的元素的结果
-		IntStream：表示原始 int 流
-		ToIntFunction接口中的方法	 
-			int applyAsInt​(T value)
+```java
+<R> Stream<R> map (Function mapper)：返回由给定函数应用于此流的元素的结果组成的流
+	Function接口中的方法		R apply (T t)
+IntStream mapToInt (ToIntFunction mapper)：返回一个IntStream其中包含将给定函数应用于此流的元素的结果
+	IntStream：表示原始 int 流
+	ToIntFunction接口中的方法	 
+		int applyAsInt (T value)
+```
 
-##### 终极操作
+##### 3. 终极操作
 
 	Stream流的常见终结操作方法
-		void forEach​(Consumer action)：对此流的每个元素执行操作
-			Consumer接口中的方法	void accept​(T t)：对给定的参数执行此操作
-		long count​()：返回此流中的元素数
+		void forEach (Consumer action)：对此流的每个元素执行操作
+			Consumer接口中的方法	void accept (T t)：对给定的参数执行此操作
+		long count ()：返回此流中的元素数
 
-##### Stream流的收集操作
+##### 4. Stream流的收集操作
 
 	Stream流的收集方法
-		R collect​(Collector collector)
+		R collect (Collector collector)
 		但是这个收集方法的参数是一个Collector 接口
-
+	
 	工具类Collectors提供了具体的收集方式
 		public static <T> Collector toList​()：把元素收集到List集合中
 		public static <T> Collector toSet​()：把元素收集到Set集合中
@@ -2897,7 +2903,7 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 		
 	方式2：	通过类名调用属性class来获取
 		Class clazz2 = Teacher.class;
-
+	
 	方式3：	通过Class类的静态方法forName()来获取
 		Class clazz3 = Class.forName("com.itheima_01.Teacher");（这是最灵活的方法）
 
@@ -2905,17 +2911,17 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 
 	①Constructor<?>[] getConstructors() 
 	通过Class类的成员方法getConstructors();该方法会返回一个Constructor[]，而Constructor就是用来描述构造方法的类。
-
+	
 	示例代码：
 	Class clazz = Class.forName("com.itheima_01.Student");
 	Constructor[] cs = clazz.getConstructors();
 	for (int i = 0; i < cs.length; i++) {
 		System.out.println(cs[i]);
 	}	注意：该方法只能获取所有的public修饰的构造方法。
-
+	
 	②Constructor<T> getConstructor(Class<?>... parameterTypes) 
 	通过Class类的成员方法getConstructor(Class<?>... parameterTypes) 获得指定参数列表的构造方法对象。
-
+	
 	示例代码：
 	Constructor c = clazz.getConstructor(String.class, int.class);// 获取有参构造，参数1类型为String，参数2类型为int	注意：该方法只能获取public修饰的构造方法。
 
@@ -2925,7 +2931,7 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 		示例代码：（通过newInstance方法创建Student的对象。）
 		Class clazz = Class.forName("com.itheima_01.Student");
 		Object obj = clazz.newInstance();		
-
+	
 	注意:其实就是调用的该类可见的无参构造。如果该类没有无参构造，或者该无参构造方法不可见，则会报错。
 
 
@@ -2947,20 +2953,20 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 	}
 	
 	②Field[] getDeclaredFields()    获取所有的成员变量，包括private修饰的
-
+	
 	示例代码：
 	//getDeclaredFields()  ：获取所有的成员变量
 	Field[] fs2 = clazz.getDeclaredFields();
 	for (int i = 0; i < fs2.length; i++) {
 		System.out.println(fs2[i]);
 	}
-
+	
 	③Field getField(String name)    获取指定字段名的public修饰的Field对象。
 	
 	示例代码：
 	//Field getField(String name)  :根据字段名称获取公共的字段对象
 	Field f = clazz.getField("age");//获取成员变量对象
-
+	
 	④Field getDeclaredField(String name)    获取指定字段名的任意Field对象（即使是私有的）
 	
 	示例代码：
@@ -2970,7 +2976,7 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 
 	Object get(Object obj)  
 	void set(Object obj, Object value) 
-
+	
 	示例代码1：（通过成员变量对象修改成员变量的值）
 		Class clazz = Class.forName("com.itheima_01.Student");
 		//获取学生类的对象
@@ -2987,12 +2993,13 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 		Class clazz = Class.forName("com.itheima_01.Student");
 		//获取学生类的对象
 		Object stu = clazz.newInstance();
-		
-		
-		//Field getField(String name)  :根据字段名称获取公共的字段对象
-		Field f = clazz.getField("age");//获取成员变量对象
-		//System.out.println(f);
-		
+
+
+​		
+​		//Field getField(String name)  :根据字段名称获取公共的字段对象
+​		Field f = clazz.getField("age");//获取成员变量对象
+​		//System.out.println(f);
+​		
 		//Object get(Object obj)
 		Object age = f.get(stu);//通过对象获取成员变量的值
 
@@ -3011,9 +3018,9 @@ System.out.println(sb.toString());	// Hello Jack! Bob!
 		
 		Object name = f.get(stu);
 		System.out.println(name);
-
-	特别注意：在使用私有的成员变量的时候要先调用setAccessible方法，设置为true，这样才可以取消java的访问检查。不止是私有的成员变量，在使用私有的构造方法，私有的方法的时候都是在使用前调用setAccessible为true。
 	
+	特别注意：在使用私有的成员变量的时候要先调用setAccessible方法，设置为true，这样才可以取消java的访问检查。不止是私有的成员变量，在使用私有的构造方法，私有的方法的时候都是在使用前调用setAccessible为true。
+
 #### 反射获得成员方法并调用
 
 ```java
@@ -3039,7 +3046,7 @@ System.out.println(wwww);
 
 	Java语言随着这些年的发展已经成为了一门影响深远的编程语言，无数平台，系统都采用Java语言编写。但是，伴随着发展，Java也越来越庞大，逐渐发展成为一门“臃肿” 的语言。而且，无论是运行一个大型的软件系统，还是运行一个小的程序，即使程序只需要使用Java的部分核心功能， JVM也要加载整个JRE环境。
 	为了给Java“瘦身”，让Java实现轻量化，Java 9正式的推出了模块化系统。Java被拆分为N多个模块，并允许Java程序可以根据需要选择加载程序必须的Java模块，这样就可以让Java以轻量化的方式来运行
-
+	
 	其实，Java 7的时候已经提出了模块化的概念，但由于其过于复杂，Java 7，Java 8都一直未能真正推出，直到Java 9才真正成熟起来。对于Java语言来说，模块化系统是一次真正的自我革新，这种革新使得“古老而庞大”的Java语言重新焕发年轻的活力
 
 #### 模块的基本使用重要步骤
@@ -3073,7 +3080,7 @@ System.out.println(wwww);
 #### 类加载
 
 	当程序要使用某个类时，如果该类还未被加载到内存中，则系统会通过类的加载，类的连接，类的初始化这三个步骤来对类进行初始化。如果不出现意外情况，JVM将会连续完成这三个步骤，所以有时也把这三个步骤统称为类加载或者类初始化
-
+	
 	类的加载
 		就是指将class文件读入内存，并为之创建一个 java.lang.Class 对象      
 		
@@ -3084,7 +3091,7 @@ System.out.println(wwww);
 		验证阶段：用于检验被加载的类是否有正确的内部结构，并和其他类协调一致
 		准备阶段：负责为类的类变量分配内存，并设置默认初始化值
 		解析阶段：将类的二进制数据中的符号引用替换为直接引用
-
+	
 	类的初始化
 		在该阶段，主要就是对类变量进行初始化
 		类的初始化步骤：
@@ -3105,14 +3112,14 @@ System.out.println(wwww);
 #### 类加载器
 
 	JVM的类加载机制
-
+	
 	- 全盘负责：就是当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入
 	- 父类委托：就是当一个类加载器负责加载某个Class时，先让父类加载器试图加载该Class，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类
 	- 缓存机制：保证所有加载过的Class都会被缓存，当程序需要使用某个Class对象时，类加载器先从缓存区中搜索该Class，只有当缓存区中不存在该Class对象时，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存储到缓存区
 
 
 	Java中的内置类加载器
-
+	
 	- Bootstrap class loader：它是虚拟机的内置类加载器，通常表示为null ，并且没有父null
 	- Platform class loader：平台类加载器可以看到所有平台类 ，平台类包括由平台类加载器或其祖先定义的Java SE平台API，其实现类和JDK特定的运行时类
 	- System class loader：它也被称为应用程序类加载器 ，与平台类加载器不同。 系统类加载器通常用于定义应用程序类路径，模块路径和JDK特定工具上的类
@@ -3125,7 +3132,7 @@ System.out.println(wwww);
 	1. 数据库的英文单词： DataBase 简称 ： DB
 	2. 什么数据库？
 		* 用于存储和管理数据的仓库。
-
+	
 	3. 数据库的特点：
 		1. 持久化存储数据的。其实数据库就是一个文件系统
 		2. 方便存储和管理数据
@@ -3200,7 +3207,7 @@ System.out.println(wwww);
 				* create database if not exists 数据库名称;
 			* 创建数据库，并指定字符集
 				* create database 数据库名称 character set 字符集名;
-
+	
 			* 练习： 创建db4数据库，判断是否存在，并制定字符集为gbk
 				* create database if not exists db4 character set gbk;
 		2. R(Retrieve)：查询
@@ -3242,11 +3249,11 @@ System.out.println(wwww);
 					4. datetime:日期，包含年月日时分秒	 yyyy-MM-dd HH:mm:ss
 					5. timestamp:时间错类型	包含年月日时分秒	 yyyy-MM-dd HH:mm:ss	
 						* 如果将来不给这个字段赋值，或赋值为null，则默认使用当前的系统时间，来自动赋值
-
+	
 					6. varchar：字符串
 						* name varchar(20):姓名最大20个字符
 						* zhangsan 8个字符  张三 2个字符
-				
+
 
 			* 创建表
 				create table student(
@@ -3279,7 +3286,7 @@ System.out.println(wwww);
 		4. D(Delete):删除
 			* drop table 表名;
 			* drop table  if exists 表名 ;
-
+	
 	* 客户端图形化工具：SQLYog
 
 #### DML： IDU增删改表中数据
@@ -3307,7 +3314,7 @@ System.out.println(wwww);
 	3. 修改数据：
 		* 语法：
 			* update 表名 set 列名1 = 值1, 列名2 = 值2,... [where 条件];
-
+	
 		* 注意：
 			1. 如果不加任何条件，则会将表中所有记录全部修改。
 
@@ -3346,7 +3353,7 @@ System.out.println(wwww);
 				* 如果该字段为null后的替换值。
 		4. 起别名：
 			* as：as也可以省略	尤其是在多表的时候给表起别名可以解决重名的问题
-			
+
 
 	3. 条件查询
 		1. where子句后跟条件
@@ -3372,14 +3379,14 @@ System.out.println(wwww);
 	1. 排序查询
 		* 语法：order by 子句
 			* order by 排序字段1 排序方式1 ，  排序字段2 排序方式2...
-
+	
 		* 排序方式：
 			* ASC：升序，默认的。
 			* DESC：降序。
-
+	
 		* 注意：
 			* 如果有多个排序条件，则当前边的条件值一样时，才会判断第二条件。
-
+	
 	2. 聚合函数：将一列数据作为一个整体，进行纵向的计算。
 		1. count：计算个数
 			1. 一般选择非空的列：主键
@@ -3388,12 +3395,12 @@ System.out.println(wwww);
 		3. min：计算最小值
 		4. sum：计算和
 		5. avg：计算平均值
-
+	
 		* 注意：聚合函数的计算，排除null值。
 			解决方案：
 				1. 选择不包含非空的列进行计算
 				2. IFNULL函数
-
+	
 	3. 分组查询:
 		1. 语法：group by 分组字段；
 		2. 注意：
@@ -3401,9 +3408,9 @@ System.out.println(wwww);
 			2. where 和 having 的区别？
 				1. where 在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来
 				2. where 后不可以跟聚合函数，having可以进行聚合函数的判断。
-
+	
 			-- 按照性别分组。分别查询男、女同学的平均分
-
+	
 			SELECT sex , AVG(math) FROM student GROUP BY sex;
 			
 			-- 按照性别分组。分别查询男、女同学的平均分,人数
@@ -3417,20 +3424,20 @@ System.out.println(wwww);
 			SELECT sex , AVG(math),COUNT(id) FROM student WHERE math > 70 GROUP BY sex HAVING COUNT(id) > 2;
 			
 			SELECT sex , AVG(math),COUNT(id) 人数 FROM student WHERE math > 70 GROUP BY sex HAVING 人数 > 2;
-
+	
 	4. 分页查询
 		1. 语法：limit 开始的索引,每页查询的条数;
 		2. 公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数
 			-- 每页显示3条记录 
-
+	
 			SELECT * FROM student LIMIT 0,3; -- 第1页
 			
 			SELECT * FROM student LIMIT 3,3; -- 第2页
 			
 			SELECT * FROM student LIMIT 6,3; -- 第3页
-
-		3. limit 是一个MySQL"方言"
 	
+		3. limit 是一个MySQL"方言"
+
 5. case
 ```sql
 * 作为switch来使用
@@ -3491,7 +3498,7 @@ FROM emp
 		2. 非空约束：not null
 		3. 唯一约束：unique
 		4. 外键约束：foreign key
-
+	
 	* 非空约束：not null，某一列的值不能为null
 		1. 创建表时添加约束
 			CREATE TABLE stu(
@@ -3504,7 +3511,7 @@ FROM emp
 
 		3. 删除name的非空约束
 			ALTER TABLE stu MODIFY NAME VARCHAR(20);
-
+	
 	* 唯一约束：unique，某一列的值不能重复
 		1. 注意：
 			* 唯一约束可以有NULL值，但是只能有一条记录为null
@@ -3517,40 +3524,40 @@ FROM emp
 			ALTER TABLE stu DROP INDEX phone_number;
 		4. 在表创建完后，添加唯一约束
 			ALTER TABLE stu MODIFY phone_number VARCHAR(20) UNIQUE;
-
+	
 	* 主键约束：primary key。
 		1. 注意：
 			1. 含义：非空且唯一
 			2. 一张表只能有一个字段为主键
 			3. 主键就是表中记录的唯一标识
-
+	
 		2. 在创建表时，添加主键约束
 			create table stu(
 				id int primary key,-- 给id添加主键约束
 				name varchar(20)
 			);
-
+	
 		3. 删除主键
 			-- 错误 alter table stu modify id int ;
 			ALTER TABLE stu DROP PRIMARY KEY;
-
+	
 		4. 创建完表后，添加主键
 			ALTER TABLE stu MODIFY id INT PRIMARY KEY;
-
+	
 		5. 自动增长：
 			1.  概念：如果某一列是数值类型的，使用 auto_increment 可以来完成值得自动增长
-
+	
 			2. 在创建表时，添加主键约束，并且完成主键自增长
 			create table stu(
 				id int primary key auto_increment,-- 给id添加主键约束
 				name varchar(20)
 			);
-
+	
 			3. 删除自动增长
 			ALTER TABLE stu MODIFY id INT;
 			4. 添加自动增长
 			ALTER TABLE stu MODIFY id INT AUTO_INCREMENT;
-
+	
 	* 外键约束：foreign key,让表于表产生关系，从而保证数据的正确性。
 		1. 在创建表时，可以添加外键
 			* 语法：
@@ -3559,10 +3566,10 @@ FROM emp
 					外键列
 					constraint 外键名称 foreign key (外键列名称) references 主表名称(主表列名称)
 				);
-
+	
 		2. 删除外键
 			ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;
-
+	
 		3. 创建表之后，添加外键
 			ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称);
 		
@@ -3573,7 +3580,7 @@ FROM emp
 			2. 分类：
 				1. 级联更新：ON UPDATE CASCADE 
 				2. 级联删除：ON DELETE CASCADE 
-	
+
 
 ### 数据库的设计
 
@@ -3599,14 +3606,14 @@ FROM emp
 		3. 一对一(了解)：
 			* 如：人和身份证
 			* 实现方式：一对一关系实现，可以在任意一方添加唯一外键指向另一方的主键。
-		
+
 #### * 2. 数据库设计的范式
 
 	* 概念：设计数据库时，需要遵循的一些规范。要遵循后边的范式要求，必须先遵循前边的所有范式要求
-
+	
 		设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这些不同的规范要求被称为不同的范式，各种范式呈递次规范，越高的范式数据库冗余越小。
 		目前关系数据库有六种范式：第一范式（1NF）、第二范式（2NF）、第三范式（3NF）、巴斯-科德范式（BCNF）、第四范式(4NF）和第五范式（5NF，又称完美范式）。
-
+	
 	* 分类：
 		1. 第一范式（1NF）：每一列都是不可分割的原子数据项
 		2. 第二范式（2NF）：在1NF的基础上，非码属性必须完全依赖于码（在1NF基础上消除非主属性对主码的部分函数依赖）
@@ -3660,7 +3667,7 @@ FROM emp
 		1. 隐式内连接：使用where条件消除无用数据
 			* 例子：
 			-- 查询所有员工信息和对应的部门信息
-
+	
 			SELECT * FROM emp,dept WHERE emp.`dept_id` = dept.`id`;
 			
 			-- 查询员工表的名称，性别。部门表的名称
@@ -3682,7 +3689,7 @@ FROM emp
 			* 例如：
 				* SELECT * FROM emp INNER JOIN dept ON emp.`dept_id` = dept.`id`;	
 				* SELECT * FROM emp JOIN dept ON emp.`dept_id` = dept.`id`;	
-
+	
 		3. 内连接查询：
 			1. 从哪些表中查询数据
 			2. 条件是什么
@@ -3710,7 +3717,7 @@ FROM emp
 			
 			-- 一条sql就完成这个操作。子查询
 			SELECT * FROM emp WHERE emp.`salary` = (SELECT MAX(salary) FROM emp);
-
+	
 		* 子查询不同情况
 			1. 子查询的结果是单行单列的：
 				* 子查询可以作为条件，使用运算符去判断。 运算符： > >= < <= =
@@ -3724,7 +3731,7 @@ FROM emp
 				SELECT * FROM emp WHERE dept_id = 3 OR dept_id = 2;
 				-- 子查询
 				SELECT * FROM emp WHERE dept_id IN (SELECT id FROM dept WHERE NAME = '财务部' OR NAME = '市场部');
-
+	
 			3. 子查询的结果是多行多列的：
 				* 子查询可以作为一张虚拟表参与查询
 				-- 查询员工入职日期是2011-11-11日之后的员工信息和部门信息
@@ -3745,7 +3752,7 @@ FROM emp
 			1. 开启事务： start transaction;
 			2. 回滚：rollback;
 			3. 提交：commit;
-
+	
 		3. MySQL数据库中事务默认自动提交
 			
 			* 事务提交的两种方式：
@@ -3769,12 +3776,12 @@ FROM emp
 		* 概念：多个事务之间隔离的，相互独立的。但是如果多个事务操作同一批数据，则会引发一些问题，设置不同的隔离级别就可以解决这些问题。
 		* 存在问题：
 			1. 脏读：一个事务，读取到另一个事务中没有提交的数据
-
+	
 			2. 不可重复读：在同一个事务中，两次读取到的数据不一样。（其他事务修改了数据，所以两次读取的数据不一样）（对于行，列）
-
+	
 			3. 幻读(虚读)：一个事务操作(DML)数据表中所有记录，另一个事务添加了一条数据，则第一个事务查询不到自己的修改。（一开始，表中name=0，比如1号事务修改了表中所有的name=1，而2号事务添加了一条数据，添加的是默认name=0，这条添加的数据不会被修改，对于1号事务，就好像出现了幻觉一样，所以叫幻读）
 			*其实不可重复读和幻读都是对于数据操作时被其他事务修改了数据，只是一个是对于表中数据的，一个是对于整个表而言的。
-
+	
 		* 隔离级别：
 			1. read uncommitted：读未提交
 				* 产生的问题：脏读、不可重复读、幻读
@@ -3784,7 +3791,7 @@ FROM emp
 				* 产生的问题：幻读
 			4. serializable：串行化
 				* 可以解决所有的问题
-
+	
 			* 注意：隔离级别从小到大安全性越来越高，但是效率越来越低
 			* 数据库查询隔离级别：
 				* select @@tx_isolation;
@@ -3798,9 +3805,9 @@ FROM emp
 		2. DML：增删改表中数据
 		3. DQL：查询表中数据
 		4. DCL：管理用户，授权
-
+	
 	* DBA：数据库管理员
-
+	
 	* DCL：管理用户，授权
 		1. 管理用户
 			1. 添加用户：
@@ -3814,11 +3821,11 @@ FROM emp
 				
 				SET PASSWORD FOR '用户名'@'主机名' = PASSWORD('新密码');
 				SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123');
-
+	
 				* mysql中忘记了root用户的密码？
 					1. cmd -- > net stop mysql 停止mysql服务
 						* 需要管理员运行该cmd
-
+	
 					2. 使用无验证方式启动mysql服务： mysqld --skip-grant-tables
 					3. 打开新的cmd窗口,直接输入mysql命令，敲回车。就可以登录成功
 					4. use mysql;
@@ -3834,13 +3841,13 @@ FROM emp
 				SELECT * FROM USER;
 				
 				* 通配符： % 表示可以在任意主机使用用户登录数据库
-
+	
 		2. 权限管理：
 			1. 查询权限：
 				-- 查询权限
 				SHOW GRANTS FOR '用户名'@'主机名';
 				SHOW GRANTS FOR 'lisi'@'%';
-
+	
 			2. 授予权限：
 				-- 授予权限
 				grant 权限列表 on 数据库名.表名 to '用户名'@'主机名';
@@ -3855,7 +3862,7 @@ FROM emp
 ### 注解
 
 	注解（Annotation），也叫元数据。一种代码级别的说明。它是JDK1.5及以后版本引入的一个特性，与类、接口、枚举是在同一个层次。它可以声明在包、类、字段、方法、局部变量、方法参数等的前面，用来对这些元素进行说明。
-
+	
 	1. 概念描述：
 		* JDK1.5之后的新特性
 		* 说明程序的
@@ -3866,14 +3873,14 @@ FROM emp
 		* @Override	：检测被该注解标注的方法是否是继承自父类(接口)的
 		* @Deprecated：该注解标注的内容，表示已过时
 		...
-
+	
 	3. 自定义注解
 		* 格式：
 			元注解
 			public @interface 注解名称{
 				属性列表;
 			}
-
+	
 		属性：接口中的抽象方法
 				* 要求：
 					1. 属性的返回值类型有下列取值
@@ -3883,7 +3890,7 @@ FROM emp
 						* 注解
 						* Class
 						* 以上类型的数组
-
+	
 					2. 定义了属性，在使用时需要给属性赋值
 						1. 如果定义属性时，使用default关键字给属性默认初始化值，则使用注解时，可以不进行属性的赋值。
 						2. 如果只有一个属性需要赋值，并且属性的名称是value，则value可以省略，直接定义值即可。
@@ -3891,7 +3898,7 @@ FROM emp
 
 
 	4. 元注解：用于描述注解的注解
-
+	
 			* @Target：描述注解能够作用的位置
 				* ElementType取值：
 					* TYPE：可以作用于类上
@@ -4000,7 +4007,7 @@ conn.close();
 						throw new RuntimeException("Can't register driver!");
 					}
 				}
-
+	
 			注意：mysql5之后的驱动jar包可以省略注册驱动的步骤。
 		2. 获取数据库连接：
 			* 方法：static Connection getConnection(String url, String user, String password) 
@@ -4045,7 +4052,7 @@ conn.close();
 			1. 游标向下移动一行
 			2. 判断是否有数据
 			3. 获取数据
-
+	
 			//循环判断游标是否是最后一行末尾。
 			while(rs.next()){
 				//获取数据
@@ -4053,7 +4060,7 @@ conn.close();
 				int id = rs.getInt(1);
 				String name = rs.getString("name");
 				double balance = rs.getDouble(3);
-
+	
 				System.out.println(id + "---" + name + "---" + balance);
 			}
 
@@ -4062,7 +4069,7 @@ conn.close();
 	1. SQL注入问题：在拼接sql时，有一些sql的特殊关键字参与字符串的拼接。会造成安全性问题
 		1. 输入用户随便，输入密码：a' or 'a' = 'a
 		2. sql：select * from user where username = 'fhdsjkf' and password = 'a' or 'a' = 'a' 
-
+	
 	2. 解决sql注入问题：使用PreparedStatement对象来解决
 	3. 预编译的SQL：参数使用?作为占位符
 	4. 步骤：
@@ -4079,7 +4086,7 @@ conn.close();
 		7. 执行sql，接受返回结果，不需要传递sql语句
 		8. 处理结果
 		9. 释放资源
-
+	
 	5. 注意：后期都会使用PreparedStatement来完成增删改查的所有操作
 		1. 可以防止SQL注入
 		2. 效率更高
@@ -4103,17 +4110,17 @@ conn.close();
 
 	1. 概念：其实就是一个容器(集合)，存放数据库连接的容器。
 		    当系统初始化好后，容器被创建，容器中会申请一些连接对象，当用户来访问数据库时，从容器中获取连接对象，用户访问完之后，会将连接对象归还给容器。
-
+	
 	2. 好处：
 		1. 节约资源
 		2. 用户访问高效
-
+	
 	3. 实现：
 		1. 标准接口：DataSource   javax.sql包下的
 			1. 方法：
 				* 获取连接：getConnection()
 				* 归还连接：Connection.close()。如果连接对象Connection是从连接池中获取的，那么调用Connection.close()方法，则不会再关闭连接了。而是归还连接
-
+	
 		2. 一般我们不去实现它，有数据库厂商来实现
 			1. C3P0：数据库连接池技术
 			2. Druid：数据库连接池实现技术，由阿里巴巴提供的
@@ -4126,7 +4133,7 @@ conn.close();
 		2. 定义配置文件：
 			* 名称： c3p0.properties 或者 c3p0-config.xml
 			* 路径：直接将文件放在src目录下即可。
-
+	
 		3. 创建核心对象 数据库连接池对象 ComboPooledDataSource
 		4. 获取连接： getConnection
 	* 代码：
@@ -4165,22 +4172,22 @@ conn.close();
 `* JdbcTemplate template = new JdbcTemplate(ds);`
 
 		3. 调用JdbcTemplate的方法来完成CRUD的操作
-
+	
 			* update():执行DML语句。增、删、改语句
-
+	
 			* queryForMap():查询结果将结果集封装为map集合，将列名作为key，将值作为value 将这条记录封装为一个map集合
 				* 注意：这个方法查询的结果集长度只能是1
 				* 必须查询出一行
-
+	
 			* queryForList():查询结果将结果集封装为list集合
 				* 注意：将每一条记录封装为一个Map集合，再将Map集合装载到List集合中
-
+	
 			* query():查询结果，将结果封装为JavaBean对象（不定）
 				* query的参数：RowMapper
 					* 一般我们使用BeanPropertyRowMapper实现类。可以完成数据到JavaBean的自动封装
 					* new BeanPropertyRowMapper<类型>(类型.class)
 					* 必须查询出一行（和查询结果有关）
-
+	
 			* queryForObject：查询结果，将结果封装为对象
 				* 一般用于聚合函数的查询
 				* 必须查询出一行
@@ -4190,7 +4197,7 @@ conn.close();
 
 	* JavaWeb：
 		* 使用Java语言开发基于互联网的项目
-
+	
 	* 软件架构：
 		1. C/S: Client/Server 客户端/服务器端
 			* 在用户本地有一个客户端程序，在远程有一个服务器端程序
@@ -4225,7 +4232,7 @@ conn.close();
 
 
 	* 我们要学习动态资源，必须先学习静态资源！
-
+	
 	* 静态资源：
 		* HTML：用于搭建基础网页，展示页面的内容
 		* CSS：用于美化页面，布局页面
@@ -4249,12 +4256,12 @@ conn.close();
 		2. 标签分为
 			1. 围堵标签：有开始标签和结束标签。如 <html> </html>
 			2. 自闭和标签：开始标签和结束标签在一起。如 <br/>
-
+	
 		3. 标签可以嵌套：
 			需要正确嵌套，不能你中有我，我中有你
 			错误：<a><b></a></b>
 			正确：<a><b></b></a>
-
+	
 		4. 在开始标签中可以定义属性。属性是由键值对构成，值需要用引号(单双都可)引起来
 		5. html的标签不区分大小写，但是建议使用小写。
 
@@ -4310,7 +4317,7 @@ conn.close();
 			* color：颜色
 			* size：大小
 			* face：字体
-
+	
 	* 属性定义：
 		* color：
 			1. 英文单词：red,green,blue
@@ -4414,7 +4421,7 @@ conn.close();
 							2. 请求参数不会再地址栏中显示。会封装在请求体中(HTTP协议后讲解)
 							2. 请求参数的大小没有限制。
 							3. 较为安全。
-
+	
 		* 表单项中的数据要想被提交：必须指定其name属性
 
 
@@ -4434,7 +4441,7 @@ conn.close();
 				* 注意：
 					1. 一般会给每一个单选框提供value属性，指定其被选中后提交的值
 					2. checked属性，可以指定默认值
-
+	
 			* file：文件选择框
 			* hidden：隐藏域，用于提交一些信息。
 			* 按钮：
@@ -4442,7 +4449,7 @@ conn.close();
 				* button：普通按钮
 				* image：图片提交按钮
 					* src属性指定图片的路径	
-
+	
 			label：指定输入项的文字描述信息
 				注意：
 					label的for属性一般会和 input 的 id属性值 对应。如果对应了，则点击label区域，会让input输入框获取焦点。
@@ -4464,7 +4471,7 @@ conn.close();
 			* 降低耦合度。解耦
 			* 让分工协作更容易
 			* 提高开发效率
-
+	
 	3. CSS的使用：CSS与html结合方式
 		1. 内联样式
 			   在标签内使用style属性指定css代码
@@ -4572,7 +4579,7 @@ conn.close();
 	* 概念：	一门客户端脚本语言
 		* 运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎
 		* 脚本语言：不需要编译，直接就可以被浏览器解析执行了
-
+	
 	* 功能：
 		* 可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些动态的效果，增强用户的体验。
 	
@@ -4581,7 +4588,7 @@ conn.close();
 		2. 1995年，Netscape(网景)公司，开发了一门客户端脚本语言：LiveScript。后来，请来SUN公司的专家，修改LiveScript，命名为JavaScript
 		3. 1996年，微软抄袭JavaScript开发出JScript语言
 		4. 1997年，ECMA(欧洲计算机制造商协会)，制定出客户端脚本语言的标准：ECMAScript，就是统一了所有客户端脚本语言的编码方式。
-
+	
 		* JavaScript = ECMAScript + JavaScript自己特有的东西(BOM+DOM)
 
 #### * ECMAScript：客户端脚本语言的标准
@@ -4592,7 +4599,7 @@ conn.close();
 				* 定义<script>，标签体内容就是js代码
 			2. 外部JS：
 				* 定义<script>，通过src属性引入外部的js文件
-
+	
 			* 注意：
 				1. <script>可以定义在html页面的任何地方。但是定义的位置会影响执行顺序。
 				2. <script>可以定义多个。
@@ -4632,10 +4639,10 @@ conn.close();
 						* boolean转number：true转为1，false转为0
 			2. 算数运算符
 				+ - * / % ...
-
+	
 			3. 赋值运算符
 				= += -+....
-
+	
 			4. 比较运算符
 				> < >= <= == ===(全等于)
 				* 比较方式
@@ -4643,7 +4650,7 @@ conn.close();
 						* 字符串：按照字典顺序比较。按位逐一比较，直到得出大小为止。
 					2. 类型不同：先进行类型转换，再比较
 						* ===：全等于。在比较之前，先判断类型，如果类型不一样，则直接返回false
-				
+
 
 			5. 逻辑运算符
 				&& || !
@@ -4682,19 +4689,19 @@ conn.close();
 ##### * 注意+ - 运算符的特殊情况
 
 	1.  console.log(1+"2"+"2");
-
+	
 	做加法时要注意双引号，当使用双引号时，Javascript会认为是字符串，字符串相加等于字符串合并。这里是122
-
+	
 	2. console.log(1++"2"+"2");
-
+	
 	第一个+“2”中加号是一个一元加操作符，+“2”会变成数值2，因此1++”2“=3，然后和后面的字符串”2“相合并，就变成了32
-
+	
 	3. console.log("A"-"B"+"2");
-
+	
 	"A"-"B" 的运算，需要先把“A"和”B"使用函数Number() 转为数值，结果为NaN，在减法操作中，如果有一个是NaN，则结果就是NaN，因为"A"-"B"的结果为NaN，然后和“2”合并，就变成了NaN2
-
+	
 	4. console.log("A"-"B"+2);
-
+	
 	根据上题所述，"A"-"B"结果为NaN，然后和数值2进行加法操作，在加法操作中，如果有一个操作数是NaN，则结果为NaN
 
 ```html
@@ -4752,13 +4759,13 @@ conn.close();
 				function 方法名称(形式参数列表){
 					方法体
 				}
-
+	
 			3. 
 				var 方法名 = function(形式参数列表){
 					方法体
 				}
 		2. 方法：
-
+	
 		3. 属性：
 			length:代表形参的个数
 		4. 特点：
@@ -4786,14 +4793,14 @@ conn.close();
 	4. Date：日期对象
 		1. 创建：
 			var date = new Date();
-
+	
 		2. 方法：
 			toLocaleString()：返回当前date对象对应的时间本地字符串格式
 			getTime():获取毫秒值。返回当前如期对象描述的时间到1970年1月1日零点的毫秒值差
 	5. Math：数学对象
 		1. 创建：
 			* 特点：Math对象不用创建，直接使用。  Math.方法名();
-
+	
 		2. 方法：
 			random():返回 0 ~ 1 之间的随机数。 含0不含1
 			ceil(x)：对数进行上舍入。
@@ -4827,7 +4834,7 @@ conn.close();
 		2. var reg = /正则表达式/;
 	2. 方法	
 		1. test(参数):验证指定的字符串是否符合正则定义的规范	
-		
+
 
 
 	9. Global
@@ -4835,15 +4842,15 @@ conn.close();
 		2. 方法：
 			encodeURI():url编码
 			decodeURI():url解码
-
+	
 			encodeURIComponent():url编码,编码的字符更多
 			decodeURIComponent():url解码
-
+	
 			parseInt():将字符串转为数字
 				* 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
 			isNaN():判断一个值是否是NaN
 				* NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
-
+	
 			eval():讲 JavaScript 字符串，并把它作为脚本代码来执行。
 		3. URL编码
 			传智播客 =  %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
@@ -4854,7 +4861,7 @@ conn.close();
 #### 1. 概念：Browser Object Model 浏览器对象模型
 
 	* 将浏览器的各个组成部分封装成对象。
-	
+
 #### 2. 组成：
 
 	* Window：窗口对象
@@ -4862,7 +4869,7 @@ conn.close();
 	* Screen：显示器屏幕对象
 	* History：历史记录对象
 	* Location：地址栏对象
-	
+
 #### 3. Window：窗口对象
 
 	1. 创建
@@ -4886,10 +4893,10 @@ conn.close();
 					2. 毫秒值
 				* 返回值：唯一标识，用于取消定时器
 			clearTimeout()	取消由 setTimeout() 方法设置的 timeout。
-
+	
 			setInterval()	按照指定的周期（以毫秒计）来调用函数或计算表达式。
 			clearInterval()	取消由 setInterval() 设置的 timeout。
-
+	
 	3. 属性：
 		1. 获取其他BOM对象：
 			history
@@ -4908,7 +4915,7 @@ conn.close();
 	1. 创建(获取)：
 		1. window.location
 		2. location
-
+	
 	2. 方法：
 		* reload()	重新加载当前文档。刷新
 	3. 属性
@@ -4920,7 +4927,7 @@ conn.close();
 	1. 创建(获取)：
 		1. window.history
 		2. history
-
+	
 	2. 方法：
 		* back()	加载 history 列表中的前一个 URL。
 		* forward()	加载 history 列表中的下一个 URL。
@@ -4938,16 +4945,16 @@ conn.close();
 
 	* 概念： Document Object Model 文档对象模型
 		* 将标记语言文档的各个组成部分，封装为对象。可以使用这些对象，对标记语言文档进行CRUD的动态操作
-	
+
 #### W3C DOM 标准被分为 3 个不同的部分：
-	
+
 	* 核心 DOM - 针对任何结构化文档的标准模型
 		* Document：文档对象
 		* Element：元素对象
 		* Attribute：属性对象
 		* Text：文本对象
 		* Comment:注释对象
-
+	
 		* Node：节点对象，其他5个的父对象
 	* XML DOM - 针对 XML 文档的标准模型
 	* HTML DOM - 针对 HTML 文档的标准模型
@@ -5019,10 +5026,10 @@ conn.close();
 	2. 焦点事件
 		1. onblur：失去焦点
 		2. onfocus:元素获得焦点。
-
+	
 	3. 加载事件：
 		1. onload：一张页面或一幅图像完成加载。
-
+	
 	4. 鼠标事件：
 		1. onmousedown	鼠标按钮被按下。
 		2. onmouseup	鼠标按键被松开。
@@ -5035,19 +5042,19 @@ conn.close();
 		1. onkeydown	某个键盘按键被按下。	
 		2. onkeyup		某个键盘按键被松开。
 		3. onkeypress	某个键盘按键被按下并松开。
-
+	
 	6. 选择和改变
 		1. onchange	域的内容被改变。
 		2. onselect	文本被选中。
-
+	
 	7. 表单事件：
 		1. onsubmit	确认按钮被点击。可以阻止表单提交
 		2. onreset	重置按钮被点击。
-	
+
 #### Event对象
 
 	概念：当一个事件触发的时候，浏览器会把这个事件相关的信息封装到一个对象中。分别用不同的属性来表示不同的信息。这个对象就是event对象。
-
+	
 	例如：在某个时刻发生了一件大事，一个按钮被点击了。
 	这个事情中有很多信息，比如哪个按钮出事了？出了什么事？这些信息都被封装进了event对象中。我们可以从event对象中获取这些信息来进行一些操作。
 
@@ -5079,7 +5086,7 @@ conn.close();
 ##### 2.在标签的属性上进行事件的绑定
 
 	在定义函数的时候定义一个参数，在标签属性上绑定事件调用该函数的时候记得一定要在小括号中把event传进去。
-
+	
 	注意：（要用的话）传入必须叫event。可以把event理解为是一个内置对象。
 
 ```html
@@ -5104,12 +5111,12 @@ conn.close();
 ##### 常见属性
 
 	1. srcElement和target ：最初触发事件的元素
-
+	
 	2. currentTarget  ：目前事件触发到的元素
-
+	
 	3.this:
 		①如果是采用匿名函数的方式绑定事件,this是绑定事件的那个元素	
-
+	
 		②如果是常用元素属性的方式去绑定this就不是元素了。
 
 
@@ -5143,16 +5150,17 @@ conn.close();
 	
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-	
-	
-		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-		<script src="js/bootstrap.min.js"></script>
-	</head>
-	<body>
-	<h1>你好，世界！</h1>
-	
+
+
+​	
+​		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+​		<script src="js/jquery-3.2.1.min.js"></script>
+​		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+​		<script src="js/bootstrap.min.js"></script>
+​	</head>
+​	<body>
+​	<h1>你好，世界！</h1>
+​	
 	</body>
 	</html>
 
@@ -5172,7 +5180,7 @@ conn.close();
 				2. sm：小屏幕 平板 (≥768px)
 				3. md：中等屏幕 桌面显示器 (≥992px)
 				4. lg：大屏幕 大桌面显示器 (≥1200px)
-
+	
 	* 注意：
 		1. 一行中如果格子数目超过12，则超出部分自动换行。
 		2. 栅格类属性可以向上兼容。栅格类适用于与屏幕宽度大于或等于分界点大小的设备。
@@ -5183,10 +5191,10 @@ conn.close();
 #### 1. 概念：Extensible Markup Language 可扩展标记语言
 
 	* 可扩展：标签都是自定义的。 <user>  <student>
-
+	
 	* 功能
-            * 存储数据
-                1. 配置文件 重点
+	        * 存储数据
+	            1. 配置文件 重点
 				2. 在网络中传输
 		* xml与html的区别
 			1. xml标签都是自定义的，html标签是预定义。
@@ -5194,7 +5202,7 @@ conn.close();
 			3. xml是存储数据的，html是展示数据
 	
 		* w3c:万维网联盟
-	
+
 #### 2. 语法：
 
 	* 基本语法：
@@ -5239,7 +5247,7 @@ conn.close();
 				* 名称不能以数字或者标点符号开始 
 				* 名称不能以字母 xml（或者 XML、Xml 等等）开始 
 				* 名称不能包含空格 
-
+	
 		4. 属性：
 			id属性值唯一
 		5. 文本：
@@ -5313,7 +5321,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	* 操作xml文档
 		1. 解析(读取)：将文档中的数据读取到内存中
 		2. 写入：将内存中的数据保存到xml文档中。持久化的存储
-
+	
 	* 解析xml的方式：
 		1. DOM：将标记语言文档一次性加载进内存，在内存中形成一颗dom树
 			* 优点：操作方便，可以对文档进行CRUD的所有操作
@@ -5324,11 +5332,11 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		SAX的解析效率更高
 
 ​		
-	* xml常见的解析器：
-		1. JAXP：sun公司提供的解析器，支持dom和sax两种思想
-		2. DOM4J：一款非常优秀的解析器
-		3. Jsoup：jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。
-		4. PULL：Android操作系统内置的解析器，sax方式的。
+​	* xml常见的解析器：
+​		1. JAXP：sun公司提供的解析器，支持dom和sax两种思想
+​		2. DOM4J：一款非常优秀的解析器
+​		3. Jsoup：jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。
+​		4. PULL：Android操作系统内置的解析器，sax方式的。
 
 
 ##### Jsoup：
@@ -5340,7 +5348,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			2. 获取Document对象
 			3. 获取对应的标签Element对象
 			4. 获取数据
-
+	
 	* 代码：
 			//2.1获取student.xml的path
 		String path = JsoupDemo1.class.getClassLoader().getResource("student.xml").getPath();
@@ -5353,7 +5361,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		Document document = Jsoup.parse(new File(path), "utf-8");
 		//3.获取元素对象 Element
 		Elements elements = document.getElementsByTag("name");
-
+	
 		System.out.println(elements.size());
 		//3.1获取第一个name的Element对象
 		Element element = elements.get(0);
@@ -5381,7 +5389,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			* getElementsByTag​(String tagName)：根据标签名称获取元素对象集合
 			* getElementsByAttribute​(String key)：根据属性名称获取元素对象集合
 			* getElementsByAttributeValue​(String key, String value)：根据对应的属性名和属性值获取元素对象集合
-
+	
 		2. 获取属性值
 			* String attr(String key)：根据属性名称获取属性值
 		3. 获取文本内容
@@ -5512,10 +5520,10 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		* Servlet的init方法，只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet是单例的
 			* 多个用户同时访问时，可能存在线程安全问题。
 			* 解决：尽量不要在Servlet中定义成员变量。即使定义了成员变量，也不要对修改值
-
+	
 	2. 提供服务：执行service方法，执行多次
 		* 每次访问Servlet时，Service方法都会被调用一次。
-
+	
 	3. 被销毁：执行destroy方法，只执行一次（destroy方法在容器移除servlet 时执行，同样只执行一次。这个方法会在所有的线程的service()方法执行完成或者超时后执行，调用这个方法后，容器不会再调用这个servlet的方法，也就是说容器不再把请求发送给这个servlet。这个方法给servlet释放占用的资源的机会，通常用来执行一些清理任务）
 		* Servlet被销毁时执行。服务器关闭时，Servlet被销毁
 		* 只有服务器正常关闭时，才会执行destroy方法。
@@ -5525,7 +5533,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 
 	* 好处：
 		* 支持注解配置。可以不需要web.xml了。
-
+	
 	* 步骤：
 		1. 创建JavaEE项目，选择Servlet的版本3.0以上，可以不创建web.xml
 		2. 定义一个类，实现Servlet接口
@@ -5540,14 +5548,14 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	GenericServlet -- 抽象类
 		|
 	HttpServlet  -- 抽象类
-
+	
 	* GenericServlet：将Servlet接口中其他的方法做了默认空实现，只将service()方法作为抽象
 		* 将来定义Servlet类时，可以继承GenericServlet，实现service()方法即可
-
+	
 	* HttpServlet：对http协议的一种封装，简化操作
 		1. 定义类继承HttpServlet
 		2. 复写doGet/doPost方法
-	
+
 #### 7. Servlet相关配置
 
 	1. urlpartten:Servlet访问路径
@@ -5556,7 +5564,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			1. /xxx：路径匹配
 			2. /xxx/xxx:多层路径，目录结构
 			3. *.do：扩展名匹配
-
+	
 	2.优先级：完全路径匹配 > 目录匹配 > 扩展名匹配
 
 ### sockt概念
@@ -5576,7 +5584,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	该对象的类的 serialVersionUID 与对应的发送者的类的版本号不同，则反序列化将会导致 InvalidCla-
 	-ssException。可序列化类可以通过声明名为“serialVersionUID”的字段（该字段必须是静态(static)、
 	最终 (final) 的 long 型字段）显式声明其自己的 serialVersionUID：
-
+	
 	  如果可序列化类未显式声明 serialVersionUID，则序列化运行时将基于该类的各个方面计算该类的默认
 	serialVersionUID 值，如“Java™ 对象序列化规范”中所述。不过，强烈建议 所有可序列化类都显式声明
 	serialVersionUID 值，原因是计算默认的 serialVersionUID 对类的详细信息具有较高的敏感性，根据
@@ -5586,7 +5594,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	因是这种声明仅应用于直接声明类 – serialVersionUID 字段作为继承成员没有用处。数组类不能声明一
 	个明确的 serialVersionUID，因此它们总是具有默认的计算值，但是数组类没有匹配 serialVersionUID
 	值的要求。
-
+	
 	简单的讲：serialVersionUID是用来标识可序列化类的，如果不显示赋值，可能因为环境的不同而不能把一个
 	类序列化后再反序列化。（报InvalidClassException  无效的类异常）
 
@@ -5594,18 +5602,18 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 
 	* 概念
 		 BeanUtils 是 Apache commons组件的成员之一，主要用于简化JavaBean封装数据的操作。它可以给JavaBean封装一个字符串数据，也可以将一个表单提交的所有数据封装到JavaBean中。使用需要工程代码中引入commons-beanutils.jar和commons-logging.jar这两个jar包
-
+	
 	populate(Object bean, Map<String,String[]>properties)	将Map数据封装到指定Javabean中，一般用于将表单的所有数据封装到javabean
-
+	
 	setProperty(Object obj,String name,Object value）	设置属性值
-
+	
 	getProperty(Object obj,String name)	获得属性值
-
+	
 	注意：
 		当我们使用BeanUtils去把表单中提交过来的参数封装到JavaBean中的时候
 		要保证，参数名要和JavaBean中的属性名相对应
 		还有一个copy方法最好不要使用（效能低（反射操作过万数据效能低），字段必须完全一样（可以手动设置），泛型擦除问题）
-
+	
 			1. JavaBean：标准的Java类
 				1. 要求：
 					1. 类必须被public修饰
@@ -5619,7 +5627,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 				成员变量：
 				属性：setter和getter方法截取后的产物
 					例如：getUsername() --> Username--> username
-
+	
 			3.实现原理
 			public static void populate(Object obj, Map<String ,String[]> map) throws IntrospectionException {
 				//获取类的所有属性的名称
@@ -5647,7 +5655,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		2. 默认端口号:80
 		3. 基于请求/响应模型的:一次请求对应一次响应
 		4. 无状态的：每次请求之间相互独立，不能交互数据
-
+	
 	* 历史版本：
 		* 1.0：每一次请求响应都会建立新的连接
 		* 1.1：复用连接
@@ -5658,7 +5666,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 
 	请求方式 请求url 请求协议/版本
 	GET /login.html	HTTP/1.1
-
+	
 	* 请求方式：
 		* HTTP协议有7中请求方式，常用的有2种
 			* GET：
@@ -5676,7 +5684,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	* 常见的请求头：
 		1. User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息
 			* 可以在服务器端获取该头的信息，解决浏览器的兼容性问题
-
+	
 		2. Referer：http://localhost/login.html
 			* 告诉服务器，我(当前请求)从哪里来？
 				* 作用：
@@ -5735,13 +5743,13 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 				5. (*)获取请求URI：/day14/demo1
 					* String getRequestURI():		/day14/demo1
 					* StringBuffer getRequestURL()  :http://localhost/day14/demo1
-
+	
 					* URL:统一资源定位符 ： http://localhost/day14/demo1	中华人民共和国
 					* URI：统一资源标识符 : /day14/demo1					共和国
 				
 				6. 获取协议及版本：HTTP/1.1
 					* String getProtocol()
-
+	
 				7. 获取客户机的IP地址：
 					* String getRemoteAddr()
 				
@@ -5757,28 +5765,30 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 					*  BufferedReader getReader()：获取字符输入流，只能操作字符数据
 					*  ServletInputStream getInputStream()：获取字节输入流，可以操作所有类型数据
 						* 在文件上传知识点后讲解
-
+	
 				2. 再从流对象中拿数据
-				
-				
-	2. 其他功能：
-		1. 获取请求参数通用方式：不论get还是post请求方式都可以使用下列方法来获取请求参数
-			1. String getParameter(String name):根据参数名称获取参数值    username=zs&password=123
-			2. String[] getParameterValues(String name):根据参数名称获取参数值的数组  hobby=xx&hobby=game
-			3. Enumeration<String> getParameterNames():获取所有请求的参数名称
-			4. Map<String,String[]> getParameterMap():获取所有参数的map集合
 
+
+​				
+​	2. 其他功能：
+​		1. 获取请求参数通用方式：不论get还是post请求方式都可以使用下列方法来获取请求参数
+​			1. String getParameter(String name):根据参数名称获取参数值    username=zs&password=123
+​			2. String[] getParameterValues(String name):根据参数名称获取参数值的数组  hobby=xx&hobby=game
+​			3. Enumeration<String> getParameterNames():获取所有请求的参数名称
+​			4. Map<String,String[]> getParameterMap():获取所有参数的map集合
+​	
 			* 中文乱码问题：
 				* get方式：tomcat 8 已经将get方式乱码问题解决了
 				* post方式：会乱码
 					* 解决：在获取参数前，设置request的编码request.setCharacterEncoding("utf-8");
-			
-					
-		2. 请求转发：一种在服务器内部的资源跳转方式
-			1. 步骤：
-				1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)
-				2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response) 
 
+
+​					
+​		2. 请求转发：一种在服务器内部的资源跳转方式
+​			1. 步骤：
+​				1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)
+​				2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response) 
+​	
 				2. 特点：
 					1. 浏览器地址栏路径不发生变化
 					2. 只能转发到当前服务器内部资源中。
@@ -5792,7 +5802,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 				1. void setAttribute(String name,Object obj):存储数据
 				2. Object getAttitude(String name):通过键获取值
 				3. void removeAttribute(String name):通过键移除键值对
-
+	
 		4. 获取ServletContext：
 			* ServletContext getServletContext()
 
@@ -5814,17 +5824,18 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 					* 404（请求路径没有对应的资源） 
 					* 405：请求方式没有对应的doXxx方法
 			5. 5xx：服务器端错误。代表：500(服务器内部出现异常)
-						
-				
+
+
+​				
 ###### 2. 响应头：
 
 	1. 格式：头名称： 值
 	2. 常见的响应头：
 		1. Content-Type：服务器告诉客户端本次响应体数据格式以及编码格式
 		2. Content-disposition：服务器告诉客户端以什么格式打开响应体数据
-
+	
 	* 值：
-
+	
 		* in-line:默认值,在当前页面内打开
 		* *attachment;filename=xxx：以附件形式打开响应体。文件下载
 
@@ -5838,7 +5849,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		Content-Type: text/html;charset=UTF-8
 		Content-Length: 101
 		Date: Wed, 06 Jun 2018 07:08:42 GMT
-
+	
 		<html>
 			<head>
 			<title>$Title$</title>
@@ -5860,9 +5871,9 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			* 使用步骤：
 				1. 获取输出流
 					* 字符输出流：PrintWriter getWriter()
-
+	
 					* 字节输出流：ServletOutputStream getOutputStream()
-
+	
 				2. 使用输出流，将数据输出到客户端浏览器
 
 #####  完成重定向
@@ -5873,7 +5884,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		response.setStatus(302);
 		//2.设置响应头location
 		response.setHeader("location","/day15/responseDemo2");
-
+	
 		//简单的重定向方法
 		response.sendRedirect("/day15/responseDemo2");
 
@@ -5888,22 +5899,22 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		1. 转发地址栏路径不变
 		2. 转发只能访问当前服务器下的资源
 		3. 转发是一次请求，可以使用request对象来共享数据
-			
+
 ##### * forward 和  redirect 区别
-				
+
 	* 路径写法：
 		1. 路径分类
 			1. 相对路径：通过相对路径不可以确定唯一资源
 				* 如：./index.html
 				* 不以/开头，以.开头路径
-
+	
 				* 规则：找到当前资源和目标资源之间的相对位置关系
 					* ./：当前目录
 					* ../:后退一级目录
 			2. 绝对路径：通过绝对路径可以确定唯一资源
 				* 如：http://localhost/day15/responseDemo2		/day15/responseDemo2
 				* 以/开头的路径
-
+	
 				* 规则：判断定义的路径是给谁用的？判断请求将来从哪儿发出
 					* 给客户端浏览器使用：需要加虚拟目录(项目的访问路径)
 						* 建议虚拟目录动态获取：request.getContextPath()再拼接资源路径
@@ -5916,13 +5927,13 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	* 步骤：
 		1. 获取字符输出流
 		2. 输出数据
-
+	
 	* 注意：
 		* 乱码问题：
 			1. PrintWriter pw = response.getWriter();获取的流的默认编码是ISO-8859-1
 			2. 设置该流的默认编码
 			3. 告诉浏览器响应体使用的编码
-
+	
 			//简单的形式，设置编码，是在获取流之前设置
 ```java
 1. response.setCharacterEncoding("UTF-8");
@@ -5947,13 +5958,13 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		1. 获取MIME类型：
 			* MIME类型:在互联网通信过程中定义的一种文件数据类型
 				* 格式： 大类型/小类型   text/html		image/jpeg
-
+	
 			* 获取：String getMimeType(String file)  
 		2. 域对象：共享数据
 			1. setAttribute(String name,Object value)
 			2. getAttribute(String name)
 			3. removeAttribute(String name)
-
+	
 			* ServletContext对象范围：所有用户所有请求的数据
 		3. 获取文件的真实(服务器)路径
 			1. 方法：String getRealPath(String path)  
@@ -5974,13 +5985,13 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		1. 页面显示超链接
 		2. 点击超链接后弹出下载提示框
 		3. 完成图片文件下载
-
+	
 	* 分析：
 		1. 超链接指向的资源如果能够被浏览器解析，则在浏览器中展示，如果不能解析，则弹出下载提示框。不满足需求
 		2. 任何资源都必须弹出下载提示框
 		3. 使用响应头设置资源的打开方式：
 			* content-disposition:attachment;filename=xxx
-
+	
 	* 步骤：
 		1. 定义页面，编辑超链接href属性，指向Servlet，传递资源名称filename
 		2. 定义Servlet
@@ -5988,7 +5999,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			2. 使用字节输入流加载文件进内存
 			3. 指定response的响应头： content-disposition:attachment;filename=xxx
 			4. 将数据写出到response输出流
-
+	
 	* 问题：
 		* 中文文件问题
 			* 解决思路：
@@ -6059,25 +6070,26 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 
 	1. 假设在一个tomcat服务器中，部署了多个web项目，那么在这些web项目中cookie能不能共享？
 		* 默认情况下cookie不能共享
-
+	
 		* setPath(String path):设置cookie的获取范围。默认情况下，设置当前的servlet的上一级目录
-
+	
 		项目 /day  servlet /servlet  cookie /day
 		项目/day  servlet /user/servlet cookie /day/user
-
+	
 			* 如果要项目之间共享，则可以将path设置为"/"
 
-	
-	2. 不同的tomcat服务器间cookie共享问题？
-		* setDomain(String path):如果设置一级域名相同，那么多个服务器之间cookie可以共享
-			* setDomain(".baidu.com"),那么tieba.baidu.com和news.baidu.com中cookie可以共享
-		
+
+​	
+​	2. 不同的tomcat服务器间cookie共享问题？
+​		* setDomain(String path):如果设置一级域名相同，那么多个服务器之间cookie可以共享
+​			* setDomain(".baidu.com"),那么tieba.baidu.com和news.baidu.com中cookie可以共享
+
 
 ###### 5. Cookie的特点和作用
 
 	1. cookie存储数据在客户端浏览器
 	2. 浏览器对于单个cookie 的大小有限制(4kb) 以及 对同一个域名下的总cookie数量也有限制(20个)
-
+	
 	* 作用：
 		1. cookie一般用于存出少量的不太敏感的数据
 		2. 在不登录的情况下，完成服务器对客户端的身份识别
@@ -6104,13 +6116,13 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	1.在创建Cookie的时候最好都调用setPath：
 		c.setPath(request.getContextPath());//当前项目共享
 		c.setPath("/");//当前服务器共享
-
+	
 	2.在删除指定Cookie的时候要把Cookie的name和path设置成和你想删除的Cookie相同。然后setMaxAge(0)；
-
+	
 	3.如果一个Cookie的path为“/day16/aaa”
 	这样的话当我们去访问/day16/aaa下的所有资源的时候都可以获取到这个Cookie
 	但是如果我们去访问比如：/day16/showCookie.html 这个时候是获取不到该Cookie的
-
+	
 	/day16/aaa/demoServlet		可以
 	/day16/aaa/bbb/demoServlet	可以
 	/day16/demoServlet			获取不到
@@ -6120,7 +6132,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 	1. 需求：
 		1. 访问一个Servlet，如果是第一次访问，则提示：您好，欢迎您首次访问。
 		2. 如果不是第一次访问，则提示：欢迎回来，您上次访问时间为:显示时间字符串
-
+	
 	2. 分析：
 		1. 可以采用Cookie来完成
 		2. 在服务器中的Servlet判断是否有一个名为lastTime的cookie
@@ -6130,14 +6142,14 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			2. 没有：是第一次访问
 				1. 响应数据：您好，欢迎您首次访问
 				2. 写回Cookie：lastTime=2018年6月10日11:50:01
-
+	
 	1.CookieUtils工具类编写
 		1.创建一个类CookieUtils
 		2.在类中定义一个静态方法，该方法接收一个要获取的cookie的名字name和cookie数组，返回一个cookie对象。
 			在方法中遍历cookie数组，挨个拿每一个cookie对象和传入的name进行比较，如果相同，返回该cookie对象
-
+	
 	注意：注意判断数组是否为空。
-
+	
 	public class CookieUtils {
 		/**
 		* 传入Cookie数组，返回你想要的指定的Cookie对象
@@ -6198,16 +6210,17 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 		Object getAttribute(String name)  
 		void setAttribute(String name, Object value)
 		void removeAttribute(String name)  
-	
+
 ##### 3. 原理
 
 	* Session的实现是依赖于Cookie的。
-
+	
 	(1) 存储在服务器端：通过cookie存储一个session_id,然后具体的数据则是保存在session中.如果用户已经登录,则服务器会在cookie中保存一个session_id,下次再请求时,会把该session_id携带上来,服务器根据session_id在session库中获取用户的session数据,就知道用户到底是谁了.以及之前保存的一些状态信息,这种专业术语叫做server side session.
-
+	
 	(2) 存储在客户端：将session数据加密,然后存储在cookie中.这种专业术语叫做 client side session.flask框架采用的就是这种方式,但是可以替换成其他形式.
 
-	
+
+​	
 ##### 4. 细节：
 
 ###### 1. 当客户端关闭后，服务器不关闭，两次获取session是否为同一个？
@@ -6225,7 +6238,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 			* 在服务器正常关闭之前，将session对象序列化到硬盘上
 		* session的活化：
 			* 在服务器启动后，将session文件转化为内存中的session对象即可。
-			
+
 ###### 3. session什么时候被销毁？
 
 	1. 服务器关闭
@@ -6240,7 +6253,7 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 
 	1. session用于存储一次会话的多次请求的数据，存在服务器端
 	2. session可以存储任意类型，任意大小的数据
-
+	
 	* session与Cookie的区别：
 	1. session存储数据在服务器端，Cookie在客户端
 	2. session没有数据大小限制，Cookie有
@@ -6250,19 +6263,19 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 
 ### jsp：本质是Servlet
 	java + html + jsp自己内容
-	
+
 #### jsp脚本：
 
 	<%! java %>:被翻译成Servlet的类内容（成员内容）
 	<% java %>：被翻译成Servlet的类中service方法中的内容
 	<%= java %>：service方法中out.print(参数) 参数内容
-		
+
 #### jsp自己内容：
 
 	指令：配置页面+引入外部资源
 
 #### page指令：配置页面
-			
+
 	errorPage(了解):给每个jsp页面配置局部的错误跳转页面（不推荐）
 
 #### 推荐使用全局错误页面配置：在web.xml中配置：
@@ -6295,12 +6308,12 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 ```xml		
 <%@include file=""%> -- 静态引入
 <jsp:include page=""> -- 动态引入(不推荐)
-```	
+```
 
 	**静态引入和动态引入的区别：
 		静态引入相当于代码的拷贝，一个jsp页面，编译一个，解析一个(只会产生一个java和一个class文件)
 		动态引入每个jsp页面各自编译，各自解析，最后统一向页面输出（会产生多个java和class文件）
-			
+
 #### taglib指令：引入外部的标签库
 
 ```jsp
@@ -6356,7 +6369,7 @@ out 输出流对象
 
 #### el表达式
 	${表达式}  -- 将表达式的结果输出到页面
-
+	
 	1. 概念：Expression Language 表达式语言
 	2. 作用：替换和简化jsp页面中java代码的编写
 	3. 语法：${表达式}
@@ -6365,7 +6378,8 @@ out 输出流对象
 			1. 设置jsp中page指令中：isELIgnored="true" 忽略当前jsp页面中所有的el表达式
 			2. \${表达式} ：忽略当前这个el表达式
 
-	
+
+​	
 ##### 表达式能做什么？？？
 	1.执行运算
 		***注意：如果在运算过程中，有数值类型的数据参与运算，那么其他非数值类型的数据会通过Long.parseLong转换为数值类型，转换失败就会抛出异常：
@@ -6400,8 +6414,9 @@ out 输出流对象
 			${key.map的键}/${key["map的键"]}
 				
 			**注意：如果map的键中有特殊字符，那么必须使用${key["map的键"]}获取
-		
-			
+
+
+​			
 #### ====综合练习：start ====
 
 ```jsp
@@ -6435,14 +6450,14 @@ out 输出流对象
 
 	1. 概念：JavaServer Pages Tag Library  JSP标准标签库
 		* 是由Apache组织提供的开源的免费的jsp标签		<标签>
-
+	
 	2. 作用：用于简化和替换jsp页面上的java代码		
-
+	
 	3. 使用步骤：
 		1. 导入jstl相关jar包
 		2. 引入标签库：taglib指令：  <%@ taglib %>
 		3. 使用标签
-
+	
 	核心标签：if
 		<c:if test="${boolean表达式}">   -- 当boolean表达式
 		的结果为true，则标签体中的内容就会输出，否则不输出
@@ -6487,7 +6502,7 @@ out 输出流对象
 		1. 早期只有servlet，只能使用response输出标签数据，非常麻烦
 		2. 后来又jsp，简化了Servlet的开发，如果过度使用jsp，在jsp中即写大量的java代码，有写html表，造成难于维护，难于分工协作
 		3. 再后来，java的web开发，借鉴mvc开发模式，使得程序的设计更加合理性
-
+	
 	2. MVC：
 		1. M：Model，模型。JavaBean
 			* 完成具体的业务操作，如：查询数据库，封装对象
@@ -6503,7 +6518,7 @@ out 输出流对象
 			1. 优点：
 				1. 耦合性低，方便维护，可以利于分工协作
 				2. 重用性高
-
+	
 			2. 缺点：
 				1. 使得项目架构变得复杂，对开发人员要求高
 
@@ -6516,7 +6531,7 @@ out 输出流对象
 	1. 界面层(表示层)：用户看的得界面。用户可以通过界面上的组件和服务器进行交互
 	2. 业务逻辑层：处理业务逻辑的。
 	3. 数据访问层：操作数据存储文件。
-
+	
 	项目的目录：
 		src
 			web(C)
@@ -6681,7 +6696,7 @@ RegistServlet{
 		sb.append(" where xx like ? ");
 	}
 ```
-	
+
 #### 方式二：
 
 ```java
@@ -6695,7 +6710,7 @@ RegistServlet{
 
 	请求到达服务器目标资源之前实现过滤 -- 做一些通用处理
 	响应到达浏览器之前实现过滤
-	
+
 #### Filter的编写：
 
 	① 写一个类实现Filter接口
@@ -6724,7 +6739,7 @@ RegistServlet{
 			<filter-mapping>
 				<filter-name>xxx
 				<url-pattern>/*
-
+	
 		***注意：过滤器配置的url-pattern是拦截路径，注解配置方式和web.xml配置方式彼此不冲突，
 					每一个url-pattern路径对应一个内存中的Filter实例对象
 
@@ -6734,15 +6749,15 @@ RegistServlet{
 	拦截请求
 	执行放行 -- 把下一个方法入栈
 	拦截响应
-		
+
 #### Filter的生命周期：
 	init：服务器启动时，创建Filter实例时执行，只执行一次（每个拦截路径对用一个实例）
 	destroy：服务器正常关闭时，销毁Filter实例时执行，只执行一次
 	doFilter：拦截到请求时执行，可以执行多次
-	
+
 ##### Filter的配置：
 	url-pattern:配置的是拦截路径，没有优先级关系
-
+	
 		完全路径匹配：以/开始，以具体路径结尾
 			/xxx
 			/xxx/yyy
@@ -6763,7 +6778,7 @@ RegistServlet{
 	想要拦截转发动作，需要配置
 		1.注解配置：
 			@WebFilter(value="/*",dispatcherTypes={DispatcherType.FORWARD,DispatcherType.REQUEST})
-				
+
 2.web.xml配置：
 ```xml
 <filter-mapping>
@@ -6773,7 +6788,7 @@ RegistServlet{
 	<dispatcher>FORWARD</dispatcher>
 </filter-mapping>
 ```
-		
+
 #### FilterChain:
 ##### 功能一：维护多个过滤器间的关系 -- []
 
@@ -6785,9 +6800,9 @@ RegistServlet{
 		
 	**既有web.xml又有注解配置：
 		web.xml中配置的永远优先于注解先执行
-
-	**可以被同一个过滤器（类）拦截两次（同时用xml和注解配置），但不是同一个过滤器对象，是两个不同的对象
 	
+	**可以被同一个过滤器（类）拦截两次（同时用xml和注解配置），但不是同一个过滤器对象，是两个不同的对象
+
 ##### 功能二：驱动多个过滤器依次执行拦截动作
 
 	chain.doFilter(req,resp);让下一个过滤器执行，没有过滤器就会执行请求。
@@ -6797,7 +6812,7 @@ RegistServlet{
 #### 1.方式一 继承：
 
 	被增强的对象必须是我们自己new出来
-	
+
 #### 2.方式二 装饰者设计模式：
 
 	缺点-- 如果接口中抽象方法过多，编码工作量就很大了
@@ -6840,7 +6855,7 @@ RegistServlet{
 				chain.doFilter(mReq,resp);
 			}
 		}
-				
+
 #### 3.方式三 代理模式：
 
 	静态代理设计模式：只能代理【接口】中声明的方法
@@ -6848,7 +6863,7 @@ RegistServlet{
 		解决方案：适配器设计模式
 		
 	动态代理：基于静态代理设计模式进行的底层封装，简化代码编写
-				
+
 #### 装饰者设计模式：可以有接口/父类之外的方法声明，扩展更加灵活 （手机商城）
 
 	① 装饰者类和被装饰者类实现共同的接口/父类
@@ -6888,7 +6903,7 @@ RegistServlet{
 				return msg.replaceAll("笨蛋","***");
 			}
 		}
-				
+
 #### 动态代理：
 
 ```java
@@ -6933,7 +6948,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 				<listener>
 					<listener-class>cn.itcast.web.listener.ContextLoaderListener</listener-class>
 				</listener>
-
+	
 					* 指定初始化参数<context-param>
 		2. 注解：
 			* @WebListener
@@ -6944,7 +6959,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 
 	 一个JavaScript框架。简化JS开发
 	* jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨	是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优	化HTML文档操作、事件处理、动画设计和Ajax交互。
-
+	
 	* JavaScript框架：本质上就是一些js文件，封装了js的原生代码而已
 
 #### 2. 快速入门
@@ -7063,7 +7078,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 			2. removeAttr():删除属性
 			3. prop():获取/设置元素的属性
 			4. removeProp():删除属性
-
+	
 			* attr和prop区别？
 				1. 如果操作的是元素的固有属性，则建议使用prop
 				2. 如果操作的是元素自定义的属性，则建议使用attr
@@ -7109,7 +7124,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 						* swing：动画执行时效果是 先慢，中间快，最后又慢
 						* linear：动画执行时速度是匀速的
 					3. fn：在动画完成时执行的函数，每个元素执行一次。
-
+	
 			2. hide([speed,[easing],[fn]])
 			3. toggle([speed],[easing],[fn])
 		
@@ -7117,7 +7132,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 			1. slideDown([speed],[easing],[fn])
 			2. slideUp([speed,[easing],[fn]])
 			3. slideToggle([speed],[easing],[fn])
-
+	
 		3. 淡入淡出显示和隐藏方式
 			1. fadeIn([speed],[easing],[fn])
 			2. fadeOut([speed],[easing],[fn])
@@ -7134,7 +7149,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 				jquery对象.each(function(index,element){});
 					* index:就是元素在集合中的索引
 					* element：就是集合中的每一个元素对象
-
+	
 					* this：集合中的每一个元素对象
 			2. 回调函数返回值：
 				* true:如果当前function返回为false，则结束循环(break)。
@@ -7142,7 +7157,7 @@ filterChain.doFilter(proxy_req,servletResponse);
 		2. $.each(object, [callback])
 		3. for..of: jquery 3.0 版本之后提供的方式
 			for(元素对象 of 容器对象)
-		
+
 #### 3. 事件绑定
 
 	1. jquery标准的绑定方式
@@ -7173,8 +7188,8 @@ filterChain.doFilter(proxy_req,servletResponse);
 			可以给一个未来的元素绑定事件
 		如：	
 			$(".word").delegate("img","click",function () {
-                $(this).remove();
-            })
+	            $(this).remove();
+	        })
 			
 			--给class属性值为word的容器下的所有img元素绑定单击事件，一旦img元素被点击，将自身移除
 		
@@ -7408,7 +7423,7 @@ $.fun3(jq);
 	1. 异步和同步：客户端和服务器端相互通信的基础上
 		* 客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。
 		* 客户端不需要等待服务器端的响应。在服务器处理请求的过程中，客户端可以进行其他的操作。
-
+	
 		Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 [1] 
 		通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
 		传统的网页（不使用 Ajax）如果需要更新内容，必须重载整个网页页面。
@@ -7520,13 +7535,13 @@ javascript中描述java中bean对象/集合的一种方式
 	p.setName("张三");
 	p.setAge(23);
 	p.setGender("男");
-
+	
 	var p = {"name":"张三","age":23,"gender":"男"};
-
+	
 	* json现在多用于存储和交换文本信息的语法
 	* 进行数据的传输
 	* JSON 比 XML 更小、更快，更易解析。
-	
+
 #### 2. 语法：
 
 	1. 基本规则
@@ -7549,22 +7564,23 @@ javascript中描述java中bean对象/集合的一种方式
 		4. 遍历
 			//1.定义基本格式
 		var person = {"name": "张三", age: 23, 'gender': true};
-
+	
 		var ps = [{"name": "张三", "age": 23, "gender": true},
 			{"name": "李四", "age": 24, "gender": true},
 			{"name": "王五", "age": 25, "gender": false}];
-		
-		
-		
-		
-			//获取person对象中所有的键和值
-			//for in 循环
-			/* for(var key in person){
-				//这样的方式获取不行。因为相当于  person."name"
-				//alert(key + ":" + person.key);
-				alert(key+":"+person[key]);
-			}*/
-		
+
+
+​		
+​		
+​		
+​			//获取person对象中所有的键和值
+​			//for in 循环
+​			/* for(var key in person){
+​				//这样的方式获取不行。因为相当于  person."name"
+​				//alert(key + ":" + person.key);
+​				alert(key+":"+person[key]);
+​			}*/
+​		
 			//获取ps中的所有值
 			for (var i = 0; i < ps.length; i++) {
 				var p = ps[i];
@@ -7572,7 +7588,7 @@ javascript中描述java中bean对象/集合的一种方式
 					alert(key+":"+p[key]);
 				}
 			}
-	
+
 
 #### 3. JSON数据和Java对象的相互转换
 
@@ -7596,12 +7612,12 @@ javascript中描述java中bean对象/集合的一种方式
 							Writer：将obj对象转换为JSON字符串，并将json数据填充到字符输出流中
 							OutputStream：将obj对象转换为JSON字符串，并将json数据填充到字节输出流中
 					* writeValueAsString(obj):将对象转为json字符串
-
+	
 				2. 注解：
 					1. @JsonIgnore：排除属性。
 					2. @JsonFormat：属性值得格式化
 						* @JsonFormat(pattern = "yyyy-MM-dd")
-
+	
 				3. 复杂java对象转换
 					1. List：数组
 					2. Map：对象格式一致
@@ -8040,7 +8056,7 @@ public class JacksonTest {
 		2）查询速度：nosql数据库将数据存储于缓存之中，关系型数据库将数据存储在硬盘中，自然查询速度远不及nosql数据库。
 		3）存储数据的格式：nosql的存储格式是key,value形式、文档形式、图片形式等等，所以可以存储基础类型以及对象或者是集合等各种格式，而数据库则只支持基础类型。
 		4）扩展性：关系型数据库有类似join这样的多表查询机制的限制导致扩展很艰难。
-
+	
 	缺点：
 		1）维护的工具和资料有限，因为nosql是属于新的技术，不能和关系型数据库10几年的技术同日而语。
 		2）不提供对sql的支持，如果不支持sql这样的工业标准，将产生一定用户的学习和使用成本。
@@ -8099,14 +8115,14 @@ public class JacksonTest {
 			set key value
 			get key
 			del key
-
+	
 		2) 哈希类型 hash
 		hash
 			hset key field value
 			hget key field
 			hgetall key  (谨慎)
 			hdel key field
-
+	
 		3) 列表类型 list
 		list
 			lpush key value1 value2 value3
@@ -8116,13 +8132,13 @@ public class JacksonTest {
 			rpop key
 			
 			lrange key 0 -1 (谨慎)
-
+	
 		4) 集合类型 set
 		set
 			sadd key value value2
 			srem key value 
 			smembers key (谨慎)
-
+	
 		5) 有序集合类型 sortedset	
 		sortedset
 			zadd key score value
@@ -8148,7 +8164,7 @@ public class JacksonTest {
 		* redis.windows.conf：配置文件
 		* redis-cli.exe：redis的客户端
 		* redis-server.exe：redis服务器端
-	
+
 ##### 1.3.3. 命令操作
 
 	1. redis的数据结构：
@@ -8227,7 +8243,7 @@ public class JacksonTest {
 			127.0.0.1:6379> srem myset a
 			(integer) 1
 	6. 有序集合类型 sortedset：不允许重复元素，且元素有顺序.每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。
-
+	
 		1. 存储：zadd key score value
 			127.0.0.1:6379> zadd mysort 60 zhangsan
 			(integer) 1
@@ -8240,7 +8256,7 @@ public class JacksonTest {
 			1) "lisi"
 			2) "zhangsan"
 			3) "wangwu"
-
+	
 			127.0.0.1:6379> zrange mysort 0 -1 withscores
 			1) "zhangsan"
 			2) "60"
@@ -8251,7 +8267,7 @@ public class JacksonTest {
 		3. 删除：zrem key value
 			127.0.0.1:6379> zrem mysort lisi
 			(integer) 1
-
+	
 	7. 通用命令
 		**1. keys * : 查询所有的键
 		**2. type key ： 获取键对应的value的类型
@@ -8279,7 +8295,7 @@ public class JacksonTest {
 		
 	2. 重新启动redis服务器，并指定配置文件名称
 		D:\JavaWeb2018\day23_redis\资料\redis\windows-64\redis-2.8.9>redis-server.exe redis.windows.conf	
-		
+
 **2. AOF：日志记录的方式，可以记录每一条命令的操作。可以每一次命令操作后，持久化数据**
 
 	1. 编辑redis.windwos.conf文件
@@ -8315,13 +8331,13 @@ public class JacksonTest {
 			//获取
 			String username = jedis.get("username");
 			System.out.println(username);
-
+	
 			//可以使用setex()方法存储可以指定过期时间的 key value
 			jedis.setex("activecode",20,"hehe");//将activecode：hehe键值对存入redis，并且20秒后自动删除该键值对
-
+	
 			//3. 关闭连接
 			jedis.close();
-
+	
 		2) 哈希类型 hash ： map格式  
 			hset
 			hget
@@ -8333,7 +8349,7 @@ public class JacksonTest {
 			jedis.hset("user","name","lisi");
 			jedis.hset("user","age","23");
 			jedis.hset("user","gender","female");
-
+	
 			// 获取hash
 			String name = jedis.hget("user", "name");
 			System.out.println(name);
@@ -8341,7 +8357,7 @@ public class JacksonTest {
 
 			// 获取hash的所有map中的数据
 			Map<String, String> user = jedis.hgetAll("user");
-
+	
 			// keyset
 			Set<String> keySet = user.keySet();
 			for (String key : keySet) {
@@ -8349,7 +8365,7 @@ public class JacksonTest {
 				String value = user.get(key);
 				System.out.println(key + ":" + value);
 			}
-
+	
 			//3. 关闭连接
 			jedis.close();
 
@@ -8365,7 +8381,7 @@ public class JacksonTest {
 			// list 存储
 			jedis.lpush("mylist","a","b","c");//从左边存
 			jedis.rpush("mylist","a","b","c");//从右边存
-
+	
 			// list 范围获取
 			List<String> mylist = jedis.lrange("mylist", 0, -1);
 			System.out.println(mylist);
@@ -8373,14 +8389,14 @@ public class JacksonTest {
 			// list 弹出
 			String element1 = jedis.lpop("mylist");//c
 			System.out.println(element1);
-
+	
 			String element2 = jedis.rpop("mylist");//c
 			System.out.println(element2);
-
+	
 			// list 范围获取
 			List<String> mylist2 = jedis.lrange("mylist", 0, -1);
 			System.out.println(mylist2);
-
+	
 			//3. 关闭连接
 			jedis.close();
 
@@ -8388,7 +8404,7 @@ public class JacksonTest {
 		4) 集合类型 set  ： 不允许重复元素
 			sadd
 			smembers:获取所有元素
-
+	
 			//1. 获取连接
 			Jedis jedis = new Jedis();//如果使用空参构造，默认值 "localhost",6379端口
 			//2. 操作
@@ -8396,17 +8412,17 @@ public class JacksonTest {
 
 			// set 存储
 			jedis.sadd("myset","java","php","c++");
-
+	
 			// set 获取
 			Set<String> myset = jedis.smembers("myset");
 			System.out.println(myset);
-
+	
 			//3. 关闭连接
 			jedis.close();
 		5) 有序集合类型 sortedset：不允许重复元素，且元素有顺序
 			zadd
 			zrange
-
+	
 			//1. 获取连接
 			Jedis jedis = new Jedis();//如果使用空参构造，默认值 "localhost",6379端口
 			//2. 操作
@@ -8414,10 +8430,10 @@ public class JacksonTest {
 			jedis.zadd("mysortedset",3,"亚瑟");
 			jedis.zadd("mysortedset",30,"后裔");
 			jedis.zadd("mysortedset",55,"孙悟空");
-
+	
 			// sortedset 获取
 			Set<String> mysortedset = jedis.zrange("mysortedset", 0, -1);
-
+	
 			System.out.println(mysortedset);
 
 
@@ -8425,16 +8441,16 @@ public class JacksonTest {
 			jedis.close();
 
 
-		
-		* jedis连接池： JedisPool
-			* 使用：
-				1. 创建JedisPool连接池对象
-				2. 调用方法 getResource()方法获取Jedis连接
-					//0.创建一个配置对象
-			        JedisPoolConfig config = new JedisPoolConfig();
-			        config.setMaxTotal(50);
-			        config.setMaxIdle(10);
-			
+​		
+​		* jedis连接池： JedisPool
+​			* 使用：
+​				1. 创建JedisPool连接池对象
+​				2. 调用方法 getResource()方法获取Jedis连接
+​					//0.创建一个配置对象
+​			        JedisPoolConfig config = new JedisPoolConfig();
+​			        config.setMaxTotal(50);
+​			        config.setMaxIdle(10);
+​			
 			        //1.创建Jedis连接池对象
 			        JedisPool jedisPool = new JedisPool(config,"localhost",6379);
 			
@@ -8442,14 +8458,15 @@ public class JacksonTest {
 			        Jedis jedis = jedisPool.getResource();
 			        //3. 使用
 			        jedis.set("hehe","heihei");
-			
-			
-			        //4. 关闭 归还到连接池中
-			        jedis.close();
-			
+
+
+​			
+​			        //4. 关闭 归还到连接池中
+​			        jedis.close();
+​			
 			* 连接池工具类
 				public class JedisPoolUtils {
-
+	
 				    private static JedisPool jedisPool;
 				
 				    static{
@@ -8480,7 +8497,7 @@ public class JacksonTest {
 				        return jedisPool.getResource();
 				    }
 				}
-		
+
 
 ### maven：项目管理工具
 
@@ -8492,7 +8509,7 @@ public class JacksonTest {
 		本地仓库
 		私服
 		中央仓库
-	
+
 #### 一键构建 -- 通过maven的相关命令，完成项目的生命周期管理
 
 	mvn clean
@@ -8502,7 +8519,7 @@ public class JacksonTest {
 	mvn package  -- main + test + 运行测试代码 + 打成jar/war包
 	mvn install -- main + test + 运行测试代码 + 打成jar/war包 + 将生成的jar/war上传到本地仓库（版本控制）
 	mvn deploy -- main + test + 运行测试代码 + 打成jar/war包 + 将生成的jar/war上传到本地仓库（版本控制）+上传远程服务器（配置后）
-	
+
 
 ### maven项目结构：
 
@@ -8525,7 +8542,7 @@ public class JacksonTest {
 		- test
 			- java
 			- resources
-				
+		
 	- pom.xml
 
 ### 面向切面编程
@@ -8580,7 +8597,7 @@ beans.xml
 	home	普通用户的家目录
 	etc		配置文件所在目录
 	usr		三方软件安装的目录
-	
+
 #### 常见命令（重点掌握）：
 
 	列出文件夹内容
@@ -8600,26 +8617,26 @@ beans.xml
 	创建/删除目录		
 		mkdir -p  多级目录   -- 创建多级目录，如果父目录存在不创建，如果父目录不存在创建
 		rmdir  目录  -- 只能删除空文件夹 （了解）
- 
+	 
 	查看文件内容：
 		cat 文件名    -- 列出文件中所有内容
 		more 文件名   -- 列出一部分，enter向下翻一行  空格向下翻一页
 		less 文件名   -- 列出一部分，PgDn向下翻页，PgUp向上翻页
 		tail -f/-F 文件名 -- 动态监听文件内容的变化
- 
+	 
 	复制/重命名/删除
 		cp 源文件 目标文件   -- 复制操作
 		mv 源文件 目标文件   -- 如果源文件和目标文件所在目录一致，相当于重命名操作
 		
 		rm -rf 文件/文件夹
- 
+	 
 	压缩/解压缩：
 		tar -cvf xx.tar file1 file2 ...  -- 打包指定文件
 		tar -cvf xx.tar ./*   -- 打包当前目录下所有内容
 		
 		tar -czvf xx.tar.gz file1 file2 ...   -- 打包并压缩指定文件
 		tar -czvf xx.tar.gz ./*    -- 打包并压缩当前目录下所有内容
- 
+	 
 		tar -xvf xx.tar   -- 在当前目录下解压
 		tar -xvf xx.tar -C 目标目录   -- 在目标目录下解压
 		
@@ -8640,14 +8657,14 @@ beans.xml
 		touch -- 创建空文件
 		wget 资源网址  -- 下载指定网址对应的资源
 		clear  -- 清理屏幕
- 
+	 
 	vim/vi编辑器：
 		编辑模式（插入模式）：i   -- 编辑内容
 		命令模式：Esc   -- 连接插入模式和底行模式的桥梁
 		底行模式：：  -- 退出编辑操作/保存编辑操作
 			wq  -- 保存退出
 			q!  -- 不保存退出
-
+	
 	重定向输出： 保存一些临时数据
 		ifconfig > a.txt  覆盖输出
 		ifconfig >> a.txt  追加输出

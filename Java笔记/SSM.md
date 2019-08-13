@@ -1,4 +1,4 @@
-[toc]
+[TOC]
 
 # SSM
 
@@ -26,18 +26,19 @@
     1.直接构造函数创建
     <bean class="" id=""></bean> 没有id默认使用class当id 相同class可以在getbean（）中使用class+#n的方式获取（n从0开始）
     name和id一样只是不严格，支持一些特殊字符等，通常不用name --name="a b c" 可以用a/b/c取getBean(a)/getBean(b)/getBean(c)
-    
+
 ```xml
-    <bean class="a.b.c"></bean> --0
-    <bean class="a.b.c"/> --1
+<bean class="a.b.c"></bean> --0
+<bean class="a.b.c"/> --1
 ```
+
 ```java
 getBean("a.b.c#1")
 ```
 
     2.工厂的静态方法创建
     <bean class="" id="" factory-method="工厂的静态方法名">
-
+    
     3.工厂的实例方法创建（要先有工厂的对象）
     <bean class="" id="" factory-bean="工厂对象的id" factory-method="工厂实例方法名">
 
@@ -47,19 +48,19 @@ getBean("a.b.c#1")
 `<bean class="a.b.c" scope="值"></bean>`
 
         * 值为singleton 单例模式 在spring容器创建时创建，容器销毁时销毁 （默认）
-
+    
         * 值为prototype 多例 在使用时创建，销毁由jvm管理，不由spring容器管理
         prototype-bean而言，在xml中配置destroy-method属性没有意义
-
+    
         * request 在创建放在request域中 每次http请求创建，仅在该请求中有效
-
+    
         * session 在创建放在session域中 同一次会话范围内有效，也就是说如果不关闭浏览器，不管刷新多少次，都会访问同一个bean。
-
+    
         * global session 在创建放在global session域中（全局session） 如果你在web中使用global session作用域来标识bean，那么web会自动当成session类型来使用    最新版本（5.2.0.BUILD-SNAPSHOT）中global session早就被移除了
-
+    
         * websocket
         websocket 的作用范围是 WebSocket ，即在整个 WebSocket 中有效。web项目有效
-
+    
         * application
         application的作用域比session又要更广一些，session作用域是针对一个 Http Session，而application作用域，则是针对一个 ServletContext，一个容器有效
     
@@ -75,7 +76,7 @@ getBean("a.b.c#1")
         <property name="属性名" ref="对象的id"></property>
         3.通过p命名空间
         p:形参名-ref/空="实参" --属性添加到bean标签中
-
+    
     2.通过构造方法
         <constructor-arg name="形参名" value/ref="实参"></constructor>
         3.通过c命名空间
@@ -213,7 +214,7 @@ classes关键字 类路径 编译后的classes目录
     2.使用spring的运行器
     3.加载spring配置（配置类ckasses（配置类的字节码文件）/配置文件;locations="classpath（类路径中）:路径"）
     4.使用依赖注入注入核心对像，@Test使用
-
+    
     spring版本为5.x那么junit版本就要为4.12以上
 
 ```java
@@ -269,13 +270,13 @@ public class A{
     * 环绕通知 <aop:around> 在增强的方法执行之前和之后执行 可以获取返回值
     * 异常抛出通知 <aop:throwing> 在增强的方法执行出异常式执行 可以获取异常信息 和后置只能同时执行一个 
     * 最终通知 <aop:after> 在增强的方法执行之后执行，必定会执行无论是否出异常 可以获取返回值
-
+    
     获取返回值和获取异常信在通知方法中写形参但要和配置文件中的参数名一样
 
 #### 切点表达式的写法
 
     excution([修饰符] 返回值类型 包名.类名.方法名(参数))
-
+    
     * 修饰符可以不写
     * 返回值类型 包名.类名.方法名 可以用通配符 * 代表任意
     * 包名 类名 之间可以用 .. 代表包下的子包中的类也算
@@ -301,6 +302,8 @@ public void 方法名(){}
 
 使用注解增强的后置增强和最终增强会有执行顺序错误，所有只使用环绕增强来代替其他增强
 
+
+
 ## 怎么写程序
 
 1.先想最简单的实现方式
@@ -308,6 +311,8 @@ public void 方法名(){}
 3.在想有没有更好的实现/更高级的技术/更高级的思想
 4.再站在整个项目/整个模块的角度去想 当前这个功能是不是可以复用
 5.写代码
+
+
 
 ## 事务
 
@@ -535,7 +540,7 @@ spring整合web工程就是在web工程中获得spring的容器
     required=false表示请求中可以没有名字为value的值的参数，如果没有默认为null，此处需要注意如下几点：
 
         原子类型：必须有值，否则抛出异常，如果允许空值请使用包装类代替。
-
+    
         Boolean包装类型类型：默认Boolean.FALSE，其他引用类型默认为null。
 
 2. 获取pojo对象
@@ -583,17 +588,17 @@ $.ajax{}中的contextType属性
 
     @RequestBody
     处理HttpEntity传递过来的数据，一般用来处理非Content-Type: application/x-www-form-urlencoded编码格式的数据。
-
+    
     GET请求中，因为没有HttpEntity，所以@RequestBody并不适用。
     POST请求中，通过HttpEntity传递的参数，必须要在请求头中声明数据的类型Content-Type，SpringMVC通过使用HandlerAdapter 配置的HttpMessageConverters来解析HttpEntity中的数据，然后绑定到相应的bean上。
-
+    
     @RequestParam
     用来处理Content-Type: 为 application/x-www-form-urlencoded编码的内容。提交方式为get或post。（Http协议中，如果不指定Content-Type，则默认传递的参数就是application/x-www-form-urlencoded类型）
-
+    
     RequestParam实质是将Request.getParameter() 中的Key-Value参数Map利用Spring的转化机制ConversionService配置，转化成参数接收对象或字段。
-
+    
     get方式中query String的值，和post方式中body data的值都会被Servlet接受到并转化到Request.getParameter()参数集中，所以@RequestParam可以获取的到。
-
+    
     1. application/x-www-form-urlencoded，这种情况的数据@RequestParam、@ModelAttribute可以处理，@RequestBody也可以处理。
     2. multipart/form-data，@RequestBody不能处理这种格式的数据。（form表单里面有文件上传时，必须要指定enctype属性值为multipart/form-data，意思是以二进制流的形式传输文件。）
     3. application/json、application/xml等格式的数据，必须使用@RequestBody来处理。
@@ -1487,7 +1492,7 @@ MVVM是Model-View-ViewModel的简写。它本质上就是MVC 的改进版。MVVM
 <!-- 流控制也不会生效，请使用三元表达式 --> 
 {{ if (ok) { return message } 
 ```
- 
+
 ### VueJS 常用系统指令
 
 #### v-on
@@ -1613,7 +1618,7 @@ axios.get('/user',{  params:{    ID:12345  } })
 1.使用maven提供的依赖调解原则 
 
     * 第一声明者优先原则 用先声明的
-
+    
     ​* 路径近者优先原则 直接依赖先于间接依赖
 
 2.排除依赖 可以使用exclusions标签将传递过来的依赖排除出去
@@ -1621,13 +1626,13 @@ axios.get('/user',{  params:{    ID:12345  } })
 3.锁定版本 （没有导jar包，还要再dependencies中导jar包（这时不用再写版本号了））
 
     采用直接锁定版本的方法确定依赖jar包的版本，版本锁定后则不考虑依赖的声明顺序或依赖的路径，以锁定的版本为准添加到工程中，此方法在企业开发中经常使用。
-
+    
     版本锁定的使用方式：
-
+    
     第一步：在dependencyManagement标签中锁定依赖的版本
-
+    
     第二步：在dependencies标签中声明需要导入的maven坐标
-
+    
     ①在dependencyManagement标签中锁定依赖的版本
 
 ```xml
@@ -1798,32 +1803,32 @@ maven私服是搭建在公司局域网内的maven仓库，公司内的所有开�
 
 ```xml
 <profile>
-	<id>dev</id>
-		<repositories>
-		<repository>
-			<id>nexus</id>
-		<!--仓库地址，即nexus仓库组的地址-->
-			<url>
-			http://localhost:8081/nexus/content/groups/public/</url>
-		<!--是否下载releases构件-->
-			<releases>
-			<enabled>true</enabled>
-			</releases>
-		<!--是否下载snapshots构件-->
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		</repositories>
+    <id>dev</id>
+        <repositories>
+        <repository>
+            <id>nexus</id>
+        <!--仓库地址，即nexus仓库组的地址-->
+            <url>
+            http://localhost:8081/nexus/content/groups/public/</url>
+        <!--是否下载releases构件-->
+            <releases>
+            <enabled>true</enabled>
+            </releases>
+        <!--是否下载snapshots构件-->
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        </repositories>
 <pluginRepositories>
-	<!-- 插件仓库，maven的运行依赖插件，也需要从私服下载插件 -->
-	<pluginRepository>
-		<id>public</id>
-		<name>Public Repositories</name>
-		<url>
-		http://localhost:8081/nexus/content/groups/public/</url>
-		</pluginRepository>
-		</pluginRepositories>
+    <!-- 插件仓库，maven的运行依赖插件，也需要从私服下载插件 -->
+    <pluginRepository>
+        <id>public</id>
+        <name>Public Repositories</name>
+        <url>
+        http://localhost:8081/nexus/content/groups/public/</url>
+        </pluginRepository>
+        </pluginRepositories>
 </profile>
 ```
 
@@ -1831,7 +1836,7 @@ maven私服是搭建在公司局域网内的maven仓库，公司内的所有开�
 
 ```xml
 <activeProfiles>
-	<activeProfile>dev</activeProfile>
+    <activeProfile>dev</activeProfile>
 </activeProfiles>
 ```
 
