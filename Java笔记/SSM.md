@@ -540,7 +540,7 @@ spring整合web工程就是在web工程中获得spring的容器
     required=false表示请求中可以没有名字为value的值的参数，如果没有默认为null，此处需要注意如下几点：
 
         原子类型：必须有值，否则抛出异常，如果允许空值请使用包装类代替。
-    
+        
         Boolean包装类型类型：默认Boolean.FALSE，其他引用类型默认为null。
 
 2. 获取pojo对象
@@ -552,6 +552,8 @@ spring整合web工程就是在web工程中获得spring的容器
     DTO（TO）：Data Transfer Object 数据传输对象
     DAO：data access object数据访问对象
     只要PoJo对象的属性和页面的表单要提交的数据的name相同就可以，直接让spring MVC注入
+    
+    **注意：@Table(表名) @ID  主键  @Transient  指定该属性不和数据库字段进行映射**
 
 3.获取数组
 只要数组名和页面的表单要提交的数据的name相同就可以，直接让spring MVC注入
