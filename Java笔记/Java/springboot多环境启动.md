@@ -14,9 +14,9 @@ Override parameters可以指定启动时所需的参数
 
 **Maven 方式启动**
 
-![img](img/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A81.png)
+![img](../img/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A81.png)
 
-![img](img/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A82.png)
+![img](../img/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8/springboot%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A82.png)
 
 Parameters配置如上图所示
 

@@ -482,7 +482,7 @@ spring整合web工程就是在web工程中获得spring的容器
 * ViewReslover解析后返回具体View。
 * DispatcherServlet根据View进行渲染视图（即将模型数据填充至视图中）。DispatcherServlet响应用户
 
-![springMVC执行流程图](img/springMVC执行流程.png)
+![springMVC执行流程图](../img/springMVC执行流程.png)
 
 ### 请求和响应
 

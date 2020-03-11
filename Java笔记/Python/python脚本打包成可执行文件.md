@@ -10,7 +10,7 @@ pip install pyinstaller
 
 无法将.py转换为.exe，因为整数被接收为Byte。
 
-![img](img/python脚本打包成可执行文件.png)
+![img](../img/python脚本打包成可执行文件.png)
 
 要安装最新的测试版，
 

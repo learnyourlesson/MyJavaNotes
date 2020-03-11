@@ -1577,7 +1577,7 @@ public static <R> void show2(R t) {
 第二种
 	双列集合//一次可以添加一对数据  map.添加(元素1,元素2);
 
-![集合结构图](img/集合结构图.png)
+![集合结构图](../img/集合结构图.png)
 
 #### Collection集合概述和使用 (单列集合)
 
@@ -3000,8 +3000,8 @@ IntStream mapToInt (ToIntFunction mapper)：返回一个IntStream其中包含将
 ​		Field f = clazz.getField("age");//获取成员变量对象
 ​		//System.out.println(f);
 ​		
-		//Object get(Object obj)
-		Object age = f.get(stu);//通过对象获取成员变量的值
+​		//Object get(Object obj)
+​		Object age = f.get(stu);//通过对象获取成员变量的值
 
 #### 暴力反射
 
@@ -5161,8 +5161,8 @@ conn.close();
 ​	<body>
 ​	<h1>你好，世界！</h1>
 ​	
-	</body>
-	</html>
+​	</body>
+​	</html>
 
 ### 响应式布局
 
@@ -5777,10 +5777,10 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 ​			3. Enumeration<String> getParameterNames():获取所有请求的参数名称
 ​			4. Map<String,String[]> getParameterMap():获取所有参数的map集合
 ​	
-			* 中文乱码问题：
-				* get方式：tomcat 8 已经将get方式乱码问题解决了
-				* post方式：会乱码
-					* 解决：在获取参数前，设置request的编码request.setCharacterEncoding("utf-8");
+​			* 中文乱码问题：
+​				* get方式：tomcat 8 已经将get方式乱码问题解决了
+​				* post方式：会乱码
+​					* 解决：在获取参数前，设置request的编码request.setCharacterEncoding("utf-8");
 
 
 ​					
@@ -5789,10 +5789,10 @@ xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
 ​				1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)
 ​				2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response) 
 ​	
-				2. 特点：
-					1. 浏览器地址栏路径不发生变化
-					2. 只能转发到当前服务器内部资源中。
-					3. 转发是一次请求
+​				2. 特点：
+​					1. 浏览器地址栏路径不发生变化
+​					2. 只能转发到当前服务器内部资源中。
+​					3. 转发是一次请求
 
 
 		3. 共享数据：
@@ -7581,13 +7581,13 @@ javascript中描述java中bean对象/集合的一种方式
 ​				alert(key+":"+person[key]);
 ​			}*/
 ​		
-			//获取ps中的所有值
-			for (var i = 0; i < ps.length; i++) {
-				var p = ps[i];
-				for(var key in p){
-					alert(key+":"+p[key]);
-				}
-			}
+​			//获取ps中的所有值
+​			for (var i = 0; i < ps.length; i++) {
+​				var p = ps[i];
+​				for(var key in p){
+​					alert(key+":"+p[key]);
+​				}
+​			}
 
 
 #### 3. JSON数据和Java对象的相互转换
@@ -8451,9 +8451,9 @@ public class JacksonTest {
 ​			        config.setMaxTotal(50);
 ​			        config.setMaxIdle(10);
 ​			
-			        //1.创建Jedis连接池对象
-			        JedisPool jedisPool = new JedisPool(config,"localhost",6379);
-			
+​			        //1.创建Jedis连接池对象
+​			        JedisPool jedisPool = new JedisPool(config,"localhost",6379);
+​			
 			        //2.获取连接
 			        Jedis jedis = jedisPool.getResource();
 			        //3. 使用
@@ -8464,9 +8464,9 @@ public class JacksonTest {
 ​			        //4. 关闭 归还到连接池中
 ​			        jedis.close();
 ​			
-			* 连接池工具类
-				public class JedisPoolUtils {
-	
+​			* 连接池工具类
+​				public class JedisPoolUtils {
+​	
 				    private static JedisPool jedisPool;
 				
 				    static{

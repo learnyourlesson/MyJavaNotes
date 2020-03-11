@@ -12,7 +12,7 @@ print("\033[0;30;40m\tHello World\033[0m")
 
 **背景色:** 40（黑色）、41（红色）、42（绿色）、 43（黄色）、44（蓝色）、45（梅色）、46（青色）、47（白色）
 
-![image-20200310001121995](img/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%931.png)
+![image-20200310001121995](../img/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%931.png)
 
 注意：需要导入 colorama 中的init
 
@@ -31,7 +31,7 @@ print ("automatically back to default color again")
 print(Fore.RED+'SCORE: ' + str(100))
 ```
 
-![img](img/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%932.png)
+![img](../img/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%932.png)
 
 1. 方法三，使用init_pair，color_pair设置颜色
 
@@ -97,7 +97,7 @@ if __name__=='__main__':
 
 运行结果：
 
-![img](img/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%933.png)
+![img](../img/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/python%E4%B8%AD%E5%9C%A8cmd%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%933.png)
 
 原文链接：https://blog.csdn.net/qq_15158911/article/details/88943571
 

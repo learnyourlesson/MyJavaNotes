@@ -6,7 +6,7 @@ JDK8新增接口，此接口包含38个方法...是的，你没看错，就是38
 
 **4.3.CompletableFuture中4个异步执行任务静态方法：**
 
-![img](img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B1.png)
+![img](../img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B1.png)
 
 如上图，其中supplyAsync用于有返回值的任务，runAsync则用于没有返回值的任务。Executor参数可以手动指定线程池，否则默认ForkJoinPool.commonPool()系统级公共线程池，注意：这些线程都是Daemon线程，主线程结束Daemon线程不结束，只有JVM关闭时，生命周期终止。
 
@@ -16,11 +16,11 @@ JDK8新增接口，此接口包含38个方法...是的，你没看错，就是38
 
  
 
-![img](img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B2.png)
+![img](../img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B2.png)
 
 **thenCompose()：第一个CompletableFuture执行完毕后，传递给下一个CompletionStage作为入参进行操作。**
 
-![img](img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B3.png)
+![img](../img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B3.png)
 
 **demo:**
 
@@ -30,7 +30,7 @@ JDK CompletableFuture 自带多任务组合方法allOf和anyOf
 
 **anyOf**是只要有一个任务完成，构造后CompletableFuture就完成
 
-![img](img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B4.png)
+![img](../img/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B/CompletionStage%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E7%BC%96%E7%A8%8B4.png)
 
 方式一：循环创建CompletableFuture list,调用sequence()组装返回一个有返回值的CompletableFuture，返回结果get()获取
 

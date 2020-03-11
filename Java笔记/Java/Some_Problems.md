@@ -199,8 +199,8 @@ Java这个时候又来了一波抽象，他把barrier分成了4种 内存模型
 
 这四个barrier是JVM内存模型的规范，而不是具体的字节码指令，因为你可以看到volatile变量在字节码中只是一个标志位，javap搞出来的字节码中并没有任何的barriers，只是说JVM执行引擎会在执行时会插一个对应的屏障，或者说在JIT/AOT生成机器指令的时候插一条对应逻辑的barriers，说句人话，这个barrier不是javac插的。
 
-![内存屏障解释图1](img/内存屏障1.jpg)
-![内存屏障解释图2](img/内存屏障2.jpg)
+![内存屏障解释图1](../img/内存屏障1.jpg)
+![内存屏障解释图2](../img/内存屏障2.jpg)
 
 * synchronized
 synchronized我们都知道就是锁，但是在java中，synchronized也是可以保证线程可见性的，我们知道信号量只能实现锁的功能，它是没有我们之前说过的内存屏障的功能的，那其实synchronized在代码块最后也是会加入一个barrier的(应该是store barrier)

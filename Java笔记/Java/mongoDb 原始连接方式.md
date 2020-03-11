@@ -22,7 +22,7 @@
 
 访问 http://127.0.0.1:27017/
 
-![img](img/mongoDb 原始连接方式1.png)
+![img](../img/mongoDb 原始连接方式1.png)
 
 **获取集合**
 

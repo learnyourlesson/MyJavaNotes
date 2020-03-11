@@ -1,8 +1,8 @@
-![img](img/Java中只有值传递/Java中只有值传递1.png)
+![img](../img/Java中只有值传递/Java中只有值传递1.png)
 
-![img](img/Java中只有值传递/Java中只有值传递2.png)
+![img](../img/Java中只有值传递/Java中只有值传递2.png)
 
-![img](img/Java中只有值传递/Java中只有值传递3.png)
+![img](../img/Java中只有值传递/Java中只有值传递3.png)
 
 **可以这么理解（实际上可能实现有点不同），区分是否是值传递的关键是，实参是否是复制了一份。**
 
