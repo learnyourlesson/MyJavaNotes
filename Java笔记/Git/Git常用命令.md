@@ -1,4 +1,9 @@
+## Git创建分支
+
+$git checkout -b 分支名  -b是切换到新分支的意思
+
 ## 恢复暂存区的指定文件到工作区
+
 $ git checkout [file]
 
 ## 恢复某个commit的指定文件到暂存区和工作区
