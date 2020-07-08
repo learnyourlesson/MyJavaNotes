@@ -2,6 +2,8 @@ netstat -tln 查看端口占用
 
 netstat -pant | grep 8080 查看8080端口占用
 
+uname -a 查看内核版本
+
 cat /etc/issue 查看linux发行版
 
 ps -ef | grep mongo 查看有关mongo的进程
