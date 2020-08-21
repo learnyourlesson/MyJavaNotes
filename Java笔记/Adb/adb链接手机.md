@@ -32,11 +32,12 @@ adb shell dumpsys window w |findstr \/ |findstr name=
 adb 的一些参数
 
 ```
--s 多设备是根据设备号指定设备
-shell 进入手机shell
-install+应用包体路径 给手机安装应用（-r 替换现有的安装）
-adb pull [文件名] /源路径/
-adb push [文件名] /目标路径/
-adb help 查看帮助文档
+adbshell 								进入手机shell
+adb install+应用包体路径 给手机安装应用（-r 替换现有的安装）
+adb pull [文件名] /源路径/			   从手机拷贝文件到电脑（好像不能直接拷到根目录下）
+adb push [文件名] /目标路径/ 			  从手机拷贝电脑到手机
+adb help							  查看帮助文档
+adb shell am force-stop 包名			 关闭某个包的应用程序		
+adb -s 设备ID（adb devices查看）		  adb操作指定的手机（电脑连接多台手机时）
 ```
 
