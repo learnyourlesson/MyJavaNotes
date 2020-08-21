@@ -39,4 +39,11 @@ q: 不保存文件，退出vi
 :e! 放弃所有修改，从上次保存文件开始再编辑
 
 
-参考链接：http://caibaojian.com/vim.html
+
+chmod命令r-4 w-2 x-1（执行）
+
+sudo chmod 644 filePath  权限为rw-r--r--
+
+参考链接：[linux命令](http://caibaojian.com/vim.html)
+
+​					[Linux修改文件权限](https://blog.csdn.net/haydenwang8287/article/details/1753883)
