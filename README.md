@@ -1,2 +1,2 @@
-# MyJavaNotes
-我的Java笔记
+# MyNotes
+我的笔记
